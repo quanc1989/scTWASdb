@@ -1,0 +1,11 @@
+column	representation	definition
+CHROM	text/chromosome	Reported chromosome from the annotation and selected job; result parser checks the expected chromosome
+GeneStart	integer	Forward genomic start from the configured GRCh38 gene annotation; not a universal TSS
+GeneEnd	integer	Forward genomic end from the configured GRCh38 gene annotation
+TargetID	text	Ensembl gene target identifier as stored in the annotation; repeated target output flagged by the task parser
+GeneName	text	Annotation gene symbol or name
+n_snps	positive integer	Count after GWAS-weight directional matching, LD exact key membership and first-key deduplication; shared by both methods in this engine
+FUSION_Z	signed numeric text	With z aligned GWAS scores and w stored ES, wᵀz / sqrt(wᵀ R w); R is computed from the covariance-derived SNP correlation matrix
+FUSION_PVAL	numeric text	Nominal two-sided tail as chi2.sf(FUSION_Z²,1) rendered by the engine's scientific formatter
+SPred_Z	signed numeric text	S-PrediXcan-style statistic (w ⊙ s)ᵀz / sqrt(wᵀ V w); V covariance and s is the vector of its SNP standard deviations
+SPred_PVAL	numeric text	Nominal two-sided tail as chi2.sf(SPred_Z²,1) rendered by the engine's scientific formatter

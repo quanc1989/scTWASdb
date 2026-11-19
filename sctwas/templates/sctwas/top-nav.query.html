@@ -1,0 +1,43 @@
+{% extends 'sctwas/base.html' %}{% load static %}
+{% block page_id %}query{% endblock %}
+{% block content %}<div class="container explore-content" data-content-version="home-explore-20261103-02">
+<header class="page-head explore-heading"><h1>Explore associations</h1><div class="example-links"><span>Example</span><button type="button" data-example="RGL4" data-example-key="0">RGL4</button><a href="documentation#interpretation">Result guide</a></div></header>
+<div class="card query-panel compact-query">
+<form id="form_search" novalidate>{% csrf_token %}
+<div class="query-main-row">
+<div class="query-tabs" role="group" aria-label="Search type"><button type="button" data-key="0" aria-pressed="true">Gene</button><button type="button" data-key="1" aria-pressed="false">Trait</button><button type="button" data-key="2" aria-pressed="false">Variant</button><button type="button" data-key="3" aria-pressed="false">Cell type</button></div>
+<div class="query-search"><label class="sr-only" for="input_search">Search value</label><input class="form-control" id="input_search" maxlength="200" placeholder="Gene symbol or Ensembl ID, e.g. RGL4" aria-describedby="query-status" required><button class="btn btn-primary" type="submit" id="search-submit">Search</button></div>
+</div>
+<details class="query-filters" id="advanced-filters"><summary><span>Filters &amp; thresholds</span><span id="filter-summary"></span></summary><div class="field-grid">
+<div class="form-group"><label for="select_celltype">Major cell type</label><select id="select_celltype" style="width:100%"></select></div>
+<div class="form-group"><label for="select_icd10">Trait category</label><select id="select_icd10" style="width:100%"></select></div>
+<div class="form-group"><label for="select_thres_twas">TWAS nominal P ≤</label><select id="select_thres_twas" style="width:100%"></select><small>A record is included if either method meets this threshold.</small></div>
+<div class="form-group" id="eqtl-filter-field" hidden><label for="select_thres">eQTL nominal P ≤</label><select id="select_thres" style="width:100%"></select><small>Used only for a variant query.</small></div>
+</div></details>
+</form>
+<div class="query-status-row"><p id="query-status" class="status-line" role="status" aria-live="polite">Enter a search value or select the example.</p><button type="button" id="cancel-search" class="btn btn-sm btn-outline-primary" hidden>Pause search</button></div>
+</div>
+<section class="card explore-results" id="query-results"><div class="card-header"><h2 class="card-title">Matching traits <span id="query-count" class="badge-state">Ready to search</span></h2><p id="result-context">One row per matching trait. Counts use the submitted query and filters.</p></div><div class="card-body"><p class="table-scroll-hint">Swipe horizontally to view all columns.</p><table id="table_traits" class="table table-striped" style="width:100%"><thead><tr><th>PheCode</th><th>Category</th><th>Trait</th><th>Cell context</th><th>Conditions</th><th>Genes</th><th>Models</th><th>Evidence</th></tr></thead><tbody></tbody></table></div>
+<details class="count-definitions"><summary>What these counts mean</summary><p>Model and gene counts refer to distinct reference-model IDs and Ensembl IDs for each trait. Cell-context and condition labels show up to two examples.</p></details></section>
+<section class="card evidence-preview" id="evidence-preview" aria-labelledby="evidence-title" hidden>
+<div class="card-header evidence-heading"><div><div class="eyebrow">Selected evidence</div><h2 id="evidence-title">Gene–trait preview</h2><p id="evidence-selection"></p></div><button type="button" class="btn btn-sm btn-outline-primary" id="evidence-close">Close preview</button></div>
+<div class="card-body">
+  <div class="evidence-controls">
+    <div><label for="evidence-gene">Gene on this record page</label><select class="form-control" id="evidence-gene"><option value="">Choose a gene</option></select></div>
+    <div><label for="evidence-order">Record order</label><select class="form-control" id="evidence-order"><option value="4:asc">FUSION P · ascending</option><option value="6:asc">SPrediXcan P · ascending</option><option value="1:asc">Model ID · ascending</option></select></div>
+    <div><label for="evidence-page-size">Records per page</label><select class="form-control" id="evidence-page-size"><option value="10">10</option><option value="25" selected>25</option></select></div>
+  </div>
+  <p id="evidence-status" class="status-line" role="status" aria-live="polite" data-state="idle"></p>
+  <p id="evidence-page-scope" class="evidence-scope"></p>
+  <div class="evidence-page-actions"><button class="btn btn-sm btn-outline-primary" type="button" id="evidence-prev">Previous page</button><button class="btn btn-sm btn-outline-primary" type="button" id="evidence-next">Next page</button><button class="btn btn-sm btn-outline-primary" type="button" id="evidence-retry" hidden>Retry records</button><a id="evidence-details" href="query">Open full matching details →</a></div>
+  <p class="evidence-scope" id="evidence-gene-scope">Gene choices come from the current record page. Select a gene before plotting a multi-gene query.</p>
+  <div id="evidence-selected" hidden>
+    <div class="evidence-legend"><span><i class="method-fusion" aria-hidden="true"></i>FUSION</span><span><i class="method-spred" aria-hidden="true"></i>SPrediXcan</span><span>Same Z axis · zero reference line</span></div>
+    <div id="evidence-chart" class="evidence-chart"></div>
+    <div class="table-responsive" tabindex="0" role="region" aria-label="Selected-gene statistics table; scroll horizontally when needed"><table id="evidence-table" class="table"><caption>Association statistics for the selected gene and reference models.</caption><thead><tr><th>Record</th><th>Model / cell context</th><th>FUSION Z</th><th>FUSION P</th><th>SPrediXcan Z</th><th>SPrediXcan P</th><th>Methods meeting nominal P filter</th><th>Model and source</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <p id="evidence-model-status" class="evidence-scope" role="status"></p><button type="button" class="btn btn-sm btn-outline-primary" id="evidence-models-retry" hidden>Retry source metadata</button>
+  <p class="evidence-interpretation">Definitions of Z statistics and nominal P values are provided in the documentation. <a href="documentation#interpretation">Interpretation guide →</a></p>
+</div></section>
+</div>{% endblock %}
+{% block scripts %}<script>var query_catalog = JSON.parse('{{ query_catalog|escapejs }}');</script><script defer src="{% static 'sctwas/js/explore-evidence.js' %}?v=20261103-02"></script><script defer src="{% static 'sctwas/js/index.js' %}?v=20261103-02"></script>{% endblock %}

@@ -1,0 +1,16 @@
+[
+  {
+    "CHROM": "22",
+    "GeneStart": "23688136",
+    "GeneEnd": "23699176",
+    "TargetID": "ENSG00000159496",
+    "GeneName": "RGL4"
+  },
+  {
+    "CHROM": "22",
+    "GeneStart": "23738682",
+    "GeneEnd": "23751112",
+    "TargetID": "ENSG00000187792",
+    "GeneName": "ZNF70"
+  }
+]

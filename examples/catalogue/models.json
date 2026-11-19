@@ -1,0 +1,1634 @@
+[
+  {
+    "majortype": "Astrocytes",
+    "subtype": "Astrocyte-like cells",
+    "condition": "Healthy (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Astro.untreated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Astrocytes",
+    "subtype": "Astrocyte-like cells",
+    "condition": "Rotenone (ROT) stimulation for 24\u2009h (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Astro.ROT-treated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Astrocytes",
+    "subtype": "Astrocytes",
+    "condition": "Healthy",
+    "celltypeid": "Astrocytes_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "B cells",
+    "condition": "Healthy",
+    "celltypeid": "B-cell_naive_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "CD19 + B cells",
+    "condition": "Healthy",
+    "celltypeid": "B-cell_CD19_Fairfax_2012",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Fairfax_2012"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "CD19 + B cells",
+    "condition": "Healthy",
+    "celltypeid": "B-cell_CD19_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "B cells",
+    "condition": "Healthy",
+    "celltypeid": "B-cell.NI_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "B cells",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "B-cell.flu_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "B cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Bcells.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "B cells",
+    "subtype": "Plasma cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Plasma.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Dendritic cells",
+    "subtype": "cDC1",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "cDC1.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Dendritic cells",
+    "subtype": "cDC2",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "cDC2.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Dendritic cells",
+    "subtype": "moDC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "moDC.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Dendritic cells",
+    "subtype": "pDC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "pDC.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endoderm cells",
+    "subtype": "Definitive Endoderm cells",
+    "condition": "Healthy",
+    "celltypeid": "Definitive_endoderm.Anna_S_E_Cuomo_2020",
+    "collectionid": "PBMC",
+    "studyid": "Cuomo_2020"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "Endothelial cells",
+    "condition": "Healthy",
+    "celltypeid": "Endothelial_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "aCap EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_aCap.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "Arteriole EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_arteriole.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "gCap EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_gCap.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "Lymphatic EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_Lymphatic.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "Systemicvenous EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_Systemicvenous.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Endothelial cells",
+    "subtype": "Venule EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Endothelial_venule.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Ependymal cells",
+    "subtype": "Ependymal-like cells",
+    "condition": "Healthy (Day 30)",
+    "celltypeid": "D30_Stegle_2021_Epen1.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Ependymal cells",
+    "subtype": "Ependymal-like cells",
+    "condition": "Healthy (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Epen1.untreated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Ependymal cells",
+    "subtype": "Ependymal-like cells",
+    "condition": "Rotenone (ROT) stimulation for 24\u2009h (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Epen1.ROT-treated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "AT1 EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_AT1.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "AT2 EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_AT2.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Basal EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Basal.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Ciliated EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Ciliated.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Differentiating Ciliated EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_DifferentiatingCiliated.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "KRT5- KRT17+ EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_KRT5-KRT17+.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Proliferating EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Proliferating.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Secretory- SCGB1A1+ MUC5B+ EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Secretory-SCGB1A1+MUC5B+.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Secretory- SCGB1A1+ SCGB3A2+ EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Secretory-SCGB1A1+SCGB3A2+.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Secretory- SCGB3A2+ EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_Secretory-SCGB3A2+.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Epithelial cells",
+    "subtype": "Transitional AT2 EC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Epithelial_TransitionalAT2.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "Fibroblast",
+    "condition": "Healthy",
+    "celltypeid": "Fibroblast_GENCORD",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Gutierrez-Arcelus_2013"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "ATF1+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "ATF1_Fibroblast.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "HOXC6+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "HOXC6_Fibroblast.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "KLF10+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "KLF10_Fibroblast.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "RXRB+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "RXRB_Fibroblast.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "SIX5+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "SIX5_Fibroblast.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "Fibroblasts",
+    "subtype": "TEAD2+ Fibroblasts",
+    "condition": "Healthy",
+    "celltypeid": "TEAD2_Fibroblast.Drew_Neavin_202",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "HLCs",
+    "subtype": "Hepatocyte-like cells",
+    "condition": "Healthy",
+    "celltypeid": "Hepatocyte-like_Cells_PhLiPS",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Pashos_2017"
+  },
+  {
+    "majortype": "Intestinal cells",
+    "subtype": "Ileum cells",
+    "condition": "Healthy",
+    "celltypeid": "Ileum_cell_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "Intestinal cells",
+    "subtype": "Rectum cells",
+    "condition": "Healthy",
+    "celltypeid": "Rectum_cell_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "Intestinal cells",
+    "subtype": "Transverse colon cells",
+    "condition": "Healthy",
+    "celltypeid": "Transverse_colon_cell_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "iPSCs_Stegle_2021",
+    "collectionid": "iPSCs",
+    "studyid": "Bonder_2021"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "iPSC_HipSci",
+    "collectionid": "iPSCs",
+    "studyid": "Kilpinen_2017"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "iPSC_iPSCORE",
+    "collectionid": "iPSCs",
+    "studyid": "Panopoulos_2017"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "iPSC_PhLiPS",
+    "collectionid": "iPSCs",
+    "studyid": "Pashos_2017"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "iPSC.Anna_S_E_Cuomo_2020",
+    "collectionid": "PBMC",
+    "studyid": "Cuomo_2020"
+  },
+  {
+    "majortype": "iPSCs",
+    "subtype": "CEBPG+ iPSCs",
+    "condition": "Healthy",
+    "celltypeid": "CEBPG_iPSC.Drew_Neavin_2021",
+    "collectionid": "Skin",
+    "studyid": "Neavin_2021"
+  },
+  {
+    "majortype": "LCLs",
+    "subtype": "Lymphoblastoid cell lines",
+    "condition": "Healthy",
+    "celltypeid": "LCL_GENCORD",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Gutierrez-Arcelus_2013"
+  },
+  {
+    "majortype": "LCLs",
+    "subtype": "Lymphoblastoid cell lines",
+    "condition": "Healthy",
+    "celltypeid": "LCL_GEUVADIS",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Lappalainen_2013"
+  },
+  {
+    "majortype": "LCLs",
+    "subtype": "Lymphoblastoid cell lines",
+    "condition": "Healthy",
+    "celltypeid": "LCL_CAP_naive",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Theusch_2020"
+  },
+  {
+    "majortype": "LCLs",
+    "subtype": "Lymphoblastoid cell lines",
+    "condition": "Statin",
+    "celltypeid": "LCL_CAP_statin",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Theusch_2020"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Healthy",
+    "celltypeid": "Macrophage_Alasoo_2018_naive",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Alasoo_2018"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "IFNg",
+    "celltypeid": "Macrophage_Alasoo_2018_IFNg",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Alasoo_2018"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "IFNg & Salmonella",
+    "celltypeid": "Macrophage_Alasoo_2018_IFNg+Salmonella",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Alasoo_2018"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Salmonella",
+    "celltypeid": "Macrophage_Alasoo_2018_Salmonella",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Alasoo_2018"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Healthy",
+    "celltypeid": "Macrophage_Nedelec_2016_naive",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Nedelec_2016"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Listeria",
+    "celltypeid": "Macrophage_Nedelec_2016_Listeria",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Nedelec_2016"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Salmonella",
+    "celltypeid": "Macrophage_Nedelec_2016_Salmonella",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Nedelec_2016"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Macrophages",
+    "condition": "Healthy",
+    "celltypeid": "Alveolarmacrophage.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Interstitial Macrophages",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Interstitialmacrophage.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Macrophages",
+    "subtype": "Monocyte derived Macrophages",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Monocyte-derivedmacrophage.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mast cells",
+    "subtype": "Mast cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mast.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesenchymal cells",
+    "subtype": "Adventitial FB",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mesenchymal_AdventitialFB.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesenchymal cells",
+    "subtype": "Alveolar FB",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mesenchymal_AlveolarFB.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesenchymal cells",
+    "subtype": "Mesothelial",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mesenchymal_Mesothelial.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesenchymal cells",
+    "subtype": "Pericytes",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mesenchymal_Pericyte.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesenchymal cells",
+    "subtype": "SMC",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Mesenchymal_SMC.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Mesendoderm cells",
+    "subtype": "Mesendoderm cells",
+    "condition": "Healthy",
+    "celltypeid": "Mesendoderm",
+    "collectionid": "PBMC",
+    "studyid": "Cuomo_2020"
+  },
+  {
+    "majortype": "Microglia cells",
+    "subtype": "Microglia cells",
+    "condition": "Healthy",
+    "celltypeid": "Microglia_naive_Young_2019",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Young_2021"
+  },
+  {
+    "majortype": "Microglia cells",
+    "subtype": "Microglia cells",
+    "condition": "Healthy",
+    "celltypeid": "Microglia_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "CD16+ Monocyte",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte_CD16_naive_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte_naive_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocytes_BLUEPRINT",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Chen_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte_Fairfax_2014_naive",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Fairfax_2014"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "IFNg (24h)",
+    "celltypeid": "Monocyte_Fairfax_2014_IFN24",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Fairfax_2014"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "LPS (24h)",
+    "celltypeid": "Monocyte_Fairfax_2014_LPS24",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Fairfax_2014"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "LPS (2h)",
+    "celltypeid": "Monocyte_Fairfax_2014_LPS2",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Fairfax_2014"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "CD14+ Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte_CD14_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte_Quach_2016_naive",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Quach_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "Monocyte_Quach_2016_IAV",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Quach_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "TLR1/2 (Pam3CSK4)",
+    "celltypeid": "Monocyte_Quach_2016_Pam3CSK4",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Quach_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "TLR4 (LPS)",
+    "celltypeid": "Monocyte_Quach_2016_LPS",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Quach_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "TLR7/8 (R848)",
+    "celltypeid": "Monocyte_Quach_2016_R848",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Quach_2016"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Healthy",
+    "celltypeid": "Monocyte.NI_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "Monocyte.flu_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Inflammatory Monocytes",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Inflammatorymonocyte.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Monocytes",
+    "subtype": "Monocytes",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Monocyte.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Myeloid cells",
+    "subtype": "Myeloid cells",
+    "condition": "Healthy",
+    "celltypeid": "Myeloid_Qin_Qin_Huang_2020_Resting",
+    "collectionid": "NC_32724101",
+    "studyid": "Huang_2020"
+  },
+  {
+    "majortype": "Myeloid cells",
+    "subtype": "Myeloid cells",
+    "condition": "LPS",
+    "celltypeid": "Myeloid_Qin_Qin_Huang_2020_LPS",
+    "collectionid": "NC_32724101",
+    "studyid": "Huang_2020"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "iPSC-derived sensory neurons (IPSDSNs)",
+    "condition": "Healthy",
+    "celltypeid": "Sensory_Neuron_Schwartzentruber_2018",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Schwartzentruber_2017"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Dopaminergic neurons (DA)",
+    "condition": "Healthy (Day 30)",
+    "celltypeid": "D30_Stegle_2021_DA.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Floor plate progenitors (FPP)",
+    "condition": "Healthy (Day 30)",
+    "celltypeid": "D30_Stegle_2021_FPP.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Serotonergic-like neurons (Sert)",
+    "condition": "Healthy (Day 30)",
+    "celltypeid": "D30_Stegle_2021_Sert.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Dopaminergic neurons (DA)",
+    "condition": "Healthy (Day 52)",
+    "celltypeid": "D52_Stegle_2021_DA.untreated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Neurons",
+    "condition": "Healthy (Day 52)",
+    "celltypeid": "D52_Stegle_2021_pseudobulk.untreated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Serotonergic-like neurons (Sert)",
+    "condition": "Healthy (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Sert.untreated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Floor plate progenitors (FPP)",
+    "condition": "Floor plate induction (Day 11)",
+    "celltypeid": "D11_Stegle_2021_FPP.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Proliferating floor plate progenitors (P-FPP)",
+    "condition": "Floor plate induction (Day 11)",
+    "celltypeid": "D11_Stegle_2021_P-FPP.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Dopaminergic neurons (DA)",
+    "condition": "Rotenone (ROT) stimulation for 24\u2009h (Day 52)",
+    "celltypeid": "D52_Stegle_2021_DA.ROT-treated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Serotonergic-like neurons (Sert)",
+    "condition": "Rotenone (ROT) stimulation for 24\u2009h (Day 52)",
+    "celltypeid": "D52_Stegle_2021_Sert.ROT-treated.iPSCs",
+    "collectionid": "iPSCs",
+    "studyid": "Jerber_2021"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Excitatory neuron",
+    "condition": "Healthy",
+    "celltypeid": "Excitatory_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Neurons",
+    "subtype": "Inhibitory neurons",
+    "condition": "Healthy",
+    "celltypeid": "Inhibitory_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Neutrophils",
+    "subtype": "Neutrophils",
+    "condition": "Healthy",
+    "celltypeid": "Neutrophil_BLUEPRINT",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Chen_2016"
+  },
+  {
+    "majortype": "Neutrophils",
+    "subtype": "CD15+ Neutrophils",
+    "condition": "Healthy",
+    "celltypeid": "Neutrophil_CD15_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "Neutrophils",
+    "subtype": "CD16+ Neutrophils",
+    "condition": "Healthy",
+    "celltypeid": "Neutrophil_CD16_Naranbhai_2015",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Naranbhai_2015"
+  },
+  {
+    "majortype": "NK cells",
+    "subtype": "NK cells",
+    "condition": "Healthy",
+    "celltypeid": "NK-cell_naive_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "NK cells",
+    "subtype": "NK cells",
+    "condition": "Healthy",
+    "celltypeid": "NK-cell_naive_Gilchrist_2021",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Gilchrist_2022"
+  },
+  {
+    "majortype": "NK cells",
+    "subtype": "NK cells",
+    "condition": "Healthy",
+    "celltypeid": "NK.NI_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "NK cells",
+    "subtype": "NK cells",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "NK.flu_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "NK cells",
+    "subtype": "NK cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "NK.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "Oligodendrocytes",
+    "subtype": "Oligodendrocytes",
+    "condition": "Healthy",
+    "celltypeid": "Oligodendrocytes_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Oligodendrocytes",
+    "subtype": "OPC/COP",
+    "condition": "Healthy",
+    "celltypeid": "OPCs_COPs_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Pericytes",
+    "subtype": "Pericytes",
+    "condition": "Healthy",
+    "celltypeid": "Pericytes_JulienBryois_2022",
+    "collectionid": "Julien.Bryois",
+    "studyid": "Bryois_2022"
+  },
+  {
+    "majortype": "Platelets",
+    "subtype": "Platelets",
+    "condition": "Healthy",
+    "celltypeid": "Platelet_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "Proliferating cells",
+    "subtype": "Proliferating cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "Proliferating.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation",
+    "celltypeid": "CD4+_T_cells_Schmiedel_2018_anti-CD3-CD28",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation",
+    "celltypeid": "CD8+_T_cells_Schmiedel_2018_anti-CD3-CD28",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD4+_T_cells_Schmiedel_2018_naive",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD8+_T_cells_Schmiedel_2018_naive",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Memory follicular helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "Tfh_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "Th1-17_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "Th17_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "Th1_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "Th2_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Regulatory T\u00a0cells",
+    "condition": "Healthy",
+    "celltypeid": "Treg_memory_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Regulatory T\u00a0cells",
+    "condition": "Healthy",
+    "celltypeid": "Treg_naive_Schmiedel_2018",
+    "collectionid": "DICE",
+    "studyid": "Schmiedel_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ Memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "CD4_Memory_Trynka_2022_stim_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "CD4_Naive_Trynka_2022_stim_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "HSP+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "HSP_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Natural regulatory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "nTreg_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Central memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "TCM_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD45RA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "TEMRA_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "TEM_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "TN_Trynka_2022_16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "IFN+ naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (16h)",
+    "celltypeid": "TN_Trynka_2022_IFN16h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ Memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "CD4_Memory_Trynka_2022_stim_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "CD4_Naive_Trynka_2022_stim_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Natural regulatory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "nTreg_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Central memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TCM_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "HLA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TEM_HLApositive_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD45RA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TEMRA_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TEM_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TM_Trynka_2022_ER-stress_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TN2_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Cycling naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TN_cycling_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TN_Trynka_2022_40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "IFN+ naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (40h)",
+    "celltypeid": "TN_Trynka_2022_IFN40h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ Memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "CD4_Memory_Trynka_2022_stim_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "CD4_Naive_Trynka_2022_stim_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Central memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TCM_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "HLA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TEM_HLApositive_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD45RA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TEMRA_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TEM_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Cycling memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TM_cycling_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Cycling naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TN_cycling_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TN_Trynka_2022_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "HSP+ naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TN_Trynka_2022_HSP_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "IFN+ naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "TN_Trynka_2022_IFN5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (5d)",
+    "celltypeid": "T_Trynka_2022_ER-stress_5d",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Central memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (lowly activated)",
+    "celltypeid": "TCM_Trynka_2022_LA",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD45RA+ effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (lowly activated)",
+    "celltypeid": "TEMRA_Trynka_2022_LA",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Effector memory T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (lowly activated)",
+    "celltypeid": "TEM_Trynka_2022_LA",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "IFN+ naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (lowly activated)",
+    "celltypeid": "TN_Trynka_2022_IFNLA",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Anti-CD3 / anti-CD28 stimulation (lowly activated)",
+    "celltypeid": "TN_Trynka_2022_LA",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ Memory T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD4_Memory_Trynka_2022_uns_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD4_Naive_Trynka_2022_uns_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Natural regulatory T cells",
+    "condition": "Healthy",
+    "celltypeid": "nTreg_Trynka_2022_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Central memory T cells",
+    "condition": "Healthy",
+    "celltypeid": "TCM_Trynka_2022_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD45RA+ effector memory T cells",
+    "condition": "Healthy",
+    "celltypeid": "TEMRA_Trynka_2022_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Effector memory T cells",
+    "condition": "Healthy",
+    "celltypeid": "TEM_Trynka_2022_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive T cells",
+    "condition": "Healthy",
+    "celltypeid": "TN_Trynka_2022_0h",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "NFKB+ naive T cells",
+    "condition": "Healthy",
+    "celltypeid": "TN_Trynka_2022_NFKB",
+    "collectionid": "dynamic_CD4T",
+    "studyid": "Soskic_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Regulatory T cells",
+    "condition": "Healthy",
+    "celltypeid": "Treg_naive_Bossini-Castillo_2019",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Bossini-Castillo_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_BLUEPRINT",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Chen_2016"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_GENCORD",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Gutierrez-Arcelus_2013"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_CD4_Kasela_2017",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Kasela_2017"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_CD8_Kasela_2017",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Kasela_2017"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_CD4_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "T-cell_CD8_CEDAR",
+    "collectionid": "eQTL_catalouge",
+    "studyid": "Momozawa_2018"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD4.T-cell.NI_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD8_NI_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "CD4.T-cell.flu_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Influenza A virus (IAV)",
+    "celltypeid": "CD8_flu_Haley.E.Randolph",
+    "collectionid": "IAV",
+    "studyid": "Randolph_2021"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "CD4.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD8+ T cells",
+    "condition": "Pulmonary fibrosis (PF) and Healthy",
+    "celltypeid": "CD8NKT.Heini_M_Natri_2023",
+    "collectionid": "Lung",
+    "studyid": "Natri_2023"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "T cells",
+    "condition": "Healthy",
+    "celltypeid": "T_cells_Qin_Qin_Huang_2020_Resting",
+    "collectionid": "NC_32724101",
+    "studyid": "Huang_2020"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "T cells",
+    "condition": "Phytohemagglutinin (PHA) stimulation",
+    "celltypeid": "T_cells_Qin_Qin_Huang_2020_PHA",
+    "collectionid": "NC_32724101",
+    "studyid": "Huang_2020"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Memory T cells",
+    "condition": "Healthy",
+    "celltypeid": "Memory_T.Aparna_Nathan_2022",
+    "collectionid": "PBMC",
+    "studyid": "Nathan_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "CD4_CTL.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Memory regulatory T cells",
+    "condition": "Healthy",
+    "celltypeid": "Memory_Treg.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Naive CD4+ T cells",
+    "condition": "Healthy",
+    "celltypeid": "Naive_CD4_T.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Na\u00efve regulatory T cells",
+    "condition": "Healthy",
+    "celltypeid": "Naive_Treg.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Follicular helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "TFH.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Follicular regulatory T cells",
+    "condition": "Healthy",
+    "celltypeid": "TFR.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "TH17.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "TH1.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "Helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "TH2.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  },
+  {
+    "majortype": "T cells",
+    "subtype": "IFN+ helper T cells",
+    "condition": "Healthy",
+    "celltypeid": "TH_IFNR.Benjamin_J_Schmiedel_2022",
+    "collectionid": "PBMC",
+    "studyid": "Schmiedel_2022"
+  }
+]

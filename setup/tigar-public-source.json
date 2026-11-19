@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/yanglab-emory/TIGAR",
+  "observed_public_commit": "c080da5b69d2746717a289bc1fbe9eb43f85ffcb",
+  "files": {
+    "TIGAR_TWAS.sh": {
+      "url": "https://raw.githubusercontent.com/yanglab-emory/TIGAR/c080da5b69d2746717a289bc1fbe9eb43f85ffcb/TIGAR_TWAS.sh",
+      "sha256": "1465dfe817f3ef99af287cd048582c4823d35eeaa7805370047d24ac0e19adfa",
+      "bytes": 6812,
+      "recorded_deployed_sha256": "59f2d0a0f0096438ca27445a8ee9286c7e00a6c86c9873c8f8c4fafb16b02bcc",
+      "equal_to_recorded_deployed_file": false
+    },
+    "TWAS/Asso_Study_02.py": {
+      "url": "https://raw.githubusercontent.com/yanglab-emory/TIGAR/c080da5b69d2746717a289bc1fbe9eb43f85ffcb/TWAS/Asso_Study_02.py",
+      "sha256": "b1bb3f12fad99b986a745598bdb942adda1d55b8c30dc859ceff99250b6b8b12",
+      "bytes": 8473,
+      "recorded_deployed_sha256": "f9227e2dbe026dfe94fce84fd9aed2608aa9de8d064a09ecf3299cbbacf0329c",
+      "equal_to_recorded_deployed_file": false
+    },
+    "TIGARutils.py": {
+      "url": "https://raw.githubusercontent.com/yanglab-emory/TIGAR/c080da5b69d2746717a289bc1fbe9eb43f85ffcb/TIGARutils.py",
+      "sha256": "ef0a802329a88795507813e2783d40b3f6efef1513ae19441a0877419650e7af",
+      "bytes": 35856,
+      "recorded_deployed_sha256": "5196deb259b535932b5870ea4a3f1d320635b32d517757824f21a13fa88c65a3",
+      "equal_to_recorded_deployed_file": false
+    }
+  }
+}

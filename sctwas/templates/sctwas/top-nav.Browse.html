@@ -1,0 +1,113 @@
+{% extends 'sctwas/base.html' %}{% load static %}{% block page_id %}browse{% endblock %}
+{% block content %}
+<div class="container catalogue">
+  <header class="page-head">
+    <h1>Data catalogue</h1>
+    <p class="lead-copy">Expression reference models, trait definitions and source studies.</p>
+  </header>
+  <nav class="catalog-tabs" aria-label="Catalogue sections">
+    <a id="tab-models" href="#card_celltype">Models <span>{{ data_celltype|length }}</span></a>
+    <a id="tab-traits" href="#card_trait">Traits <span>{{ data_trait|length }}</span></a>
+    <a id="tab-sources" href="#card_study">Sources <span>{{ data_study|length }}</span></a>
+  </nav>
+
+  <section class="card catalog-panel" id="card_celltype">
+    <div class="card-header">
+      <h2 class="card-title" id="models-heading">Expression reference models</h2>
+      <p>Cell populations, experimental conditions and source references.</p>
+    </div>
+    <div class="card-body">
+      <div class="catalog-tools" hidden>
+        <label>Search models <input type="search" class="form-control catalog-search"></label>
+        <label>Major type <select class="custom-select catalog-category"><option value="">All</option></select></label>
+        <label class="catalog-sort-label">Sort by <select class="custom-select catalog-sort"></select></label>
+        <button type="button" class="btn btn-light catalog-reset">Reset filters</button>
+      </div>
+      <p class="catalog-fallback">Showing up to 10 records until the interactive table loads. <a href="{% url 'catalog_download' %}?kind=models">Download all model records (JSON)</a></p>
+      <div class="catalog-table" role="region" aria-labelledby="models-heading">
+        <table id="table_celltype" class="table catalog-records" role="table">
+          <thead role="rowgroup"><tr role="row">
+            <th scope="col">Cell population</th><th scope="col">Condition</th><th scope="col">Source study</th><th scope="col">Details</th>
+          </tr></thead>
+          <tbody role="rowgroup">
+          {% for model in fallback_models %}
+            <tr class="catalog-record" role="row">
+              <td class="catalog-primary" role="cell"><a href="provenance?model={{ model.evidence_id|urlencode }}">{{ model.subtype }}</a><span class="catalog-secondary">{{ model.majortype }}</span></td>
+              <td role="cell"><span class="catalog-mobile-label" aria-hidden="true">Condition</span>{{ model.condition }}</td>
+              <td role="cell"><span class="catalog-mobile-label" aria-hidden="true">Source study</span>{% if model.publication_url %}<a href="{{ model.publication_url }}">{{ model.journal }} · {{ model.year }}</a>{% else %}{{ model.journal }}{% endif %}</td>
+              <td class="catalog-control" role="cell"></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="card catalog-panel" id="card_trait">
+    <div class="card-header">
+      <h2 class="card-title" id="traits-heading">Trait definitions</h2>
+      <p>Phenotype definitions and GWAS sample sizes.</p>
+    </div>
+    <div class="card-body">
+      <div class="catalog-tools" hidden>
+        <label>Search traits <input type="search" class="form-control catalog-search"></label>
+        <label>Category <select class="custom-select catalog-category"><option value="">All</option></select></label>
+        <label class="catalog-sort-label">Sort by <select class="custom-select catalog-sort"></select></label>
+        <button type="button" class="btn btn-light catalog-reset">Reset filters</button>
+      </div>
+      <p class="catalog-fallback">Showing up to 10 records until the interactive table loads. <a href="{% url 'catalog_download' %}?kind=traits">Download all trait records (JSON)</a></p>
+      <div class="catalog-table" role="region" aria-labelledby="traits-heading">
+        <table id="table_traits" class="table catalog-records" role="table">
+          <thead role="rowgroup"><tr role="row">
+            <th scope="col">Trait</th><th scope="col">Category</th><th scope="col">GWAS sample size</th><th scope="col">Details</th>
+          </tr></thead>
+          <tbody role="rowgroup">
+          {% for trait in fallback_traits %}
+            <tr class="catalog-record" role="row">
+              <td class="catalog-primary" role="cell"><a href="{{ trait.association_url }}">{{ trait.description }}</a><span class="catalog-secondary">PheCode {{ trait.phecode }}</span></td>
+              <td role="cell"><span class="catalog-mobile-label" aria-hidden="true">Category</span>{{ trait.icd10 }}</td>
+              <td role="cell"><span class="catalog-mobile-label" aria-hidden="true">GWAS sample size</span>{{ trait.display_n|default:"Not recorded" }}</td>
+              <td class="catalog-control" role="cell"></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="card catalog-panel" id="card_study">
+    <div class="card-header">
+      <h2 class="card-title" id="studies-heading">Source studies</h2>
+      <p>Publications, expression assays and study context.</p>
+    </div>
+    <div class="card-body">
+      <div class="catalog-tools" hidden>
+        <label>Search sources <input type="search" class="form-control catalog-search"></label>
+        <label class="catalog-sort-label">Sort by <select class="custom-select catalog-sort"></select></label>
+        <button type="button" class="btn btn-light catalog-reset">Reset filters</button>
+      </div>
+      <p class="catalog-fallback">Showing up to 10 records until the interactive table loads. <a href="{% url 'catalog_download' %}?kind=studies">Download all source records (JSON)</a></p>
+      <div class="catalog-table" role="region" aria-labelledby="studies-heading">
+        <table id="table_study" class="table catalog-records" role="table">
+          <thead role="rowgroup"><tr role="row">
+            <th scope="col">Source reference</th><th scope="col">Expression assay and collection</th><th scope="col">Recorded models</th><th scope="col">Details</th>
+          </tr></thead>
+          <tbody role="rowgroup">
+          {% for study in fallback_studies %}
+            <tr class="catalog-record" role="row">
+              <td class="catalog-primary" role="cell"><span class="catalog-name">{{ study.title }}</span><span class="catalog-secondary">{{ study.journal }} · {{ study.year }}</span></td>
+              <td role="cell">{{ study.display_assay }}<span class="catalog-secondary">Catalogue collection · {{ study.sample }}</span></td>
+              <td role="cell"><span class="catalog-mobile-label" aria-hidden="true">Recorded models</span>{{ study.modelsize }}</td>
+              <td class="catalog-control" role="cell">{% if study.publication_url %}<a href="{{ study.publication_url }}">Publication</a>{% endif %}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}<script>var catalog = JSON.parse('{{ page_payload|escapejs }}');</script><script defer src="{% static 'sctwas/js/browse.js' %}?v=20261117"></script>{% endblock %}

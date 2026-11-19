@@ -1,0 +1,19 @@
+{% extends 'sctwas/base.html' %}{% block page_id %}downloads{% endblock %}
+{% block content %}
+<div class="container">
+<header class="page-head"><h1>Downloads</h1><p class="lead-copy">Access example input files, reference metadata and task-specific results.</p></header>
+<section class="card">
+  <div class="card-header"><h2 class="card-title">Example inputs</h2></div>
+  <div class="card-body table-responsive">
+    <table class="table"><thead><tr><th>Input</th><th>Scope and format</th><th>File</th></tr></thead><tbody>
+      <tr><td>GWAS summary statistics</td><td>UKB trait 411.8, chr22 regions. 4,500 rows, gzip-compressed TSV.</td><td><a href="example_download?kind=twas">Download example</a><br><a href="documentation#twas-input">GWAS input format</a></td></tr>
+      <tr><td>eQTL summary statistics</td><td>One-gene chr22 subset of D11_Stegle_2021_FPP.iPSCs. 134 variants, N = 215, TSV.</td><td><a href="example_download?kind=grex">Download example</a><br><a href="documentation#grex-input">eQTL input format</a></td></tr>
+    </tbody></table>
+  </div>
+</section>
+<section class="card" id="models"><div class="card-header"><h2 class="card-title">Reference metadata</h2><p>JSON catalogue records and chromosome file information.</p></div>
+  <div class="card-body"><div class="page-actions"><a class="btn btn-outline-primary" href="catalog_download?kind=models">Model records</a><a class="btn btn-outline-primary" href="catalog_download?kind=traits">Trait records</a><a class="btn btn-outline-primary" href="catalog_download?kind=studies">Source records</a><a class="btn btn-outline-primary" href="provenance_download" download>Versioned model metadata</a></div></div>
+</section>
+<section class="card"><div class="card-header"><h2 class="card-title">Task outputs</h2></div><div class="card-body"><p>Open the task link generated at submission to retrieve filtered TWAS records or method-specific expression weight files.</p><a href="documentation#results">Task states and output formats →</a></div></section>
+</div>
+{% endblock %}

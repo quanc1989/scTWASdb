@@ -1,0 +1,53 @@
+{
+  "base.css": {
+    "bytes": 163134,
+    "sha256": "07ea775b03dedfa47eb59036052272c832c191bc2f0fad277622aa84e2568f01",
+    "sources": {
+      "AdminLTE-3.2.0/dist/css/adminlte.min.css": "ae1534a2c9540d6ad60f14d8e09c48d9ad8e751b46ed849fdefe737116dcc921"
+    }
+  },
+  "base.js": {
+    "bytes": 183449,
+    "sha256": "1700ce055be6f81ef5ad849ae706f72ec2bb84f750cb1c72d877e1efe1cda097",
+    "sources": {
+      "AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js": "7e02c082fedfc821a8a51fe004dab6896dd928876a21ccac8675142c2e2f7b1f",
+      "AdminLTE-3.2.0/plugins/jquery/jquery.min.js": "ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e",
+      "js/ui.js": "1102fd7a7818f58f09aae141c8aa25427a8cdcee5094090afb02f9610a9696bb"
+    }
+  },
+  "exports.js": {
+    "bytes": 51986,
+    "sha256": "ba519f6915338ed96005ed110fb921b5070d2fcc537d5df3538b511757e93d88",
+    "sources": {
+      "AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.bootstrap4.min.js": "1a78bde68d6468819cdc3d2bb5f97a6f5b976ccbda93702cdc3f965cb55ae6cd",
+      "AdminLTE-3.2.0/plugins/datatables-buttons/js/buttons.html5.min.js": "d47f2c7a29fbfd20a8a1233f1f1f8e249a2777d101a940e08dd21e66cd22805b",
+      "AdminLTE-3.2.0/plugins/datatables-buttons/js/dataTables.buttons.min.js": "736a8dae490e2ede56c286e39bfae217c4d64fef6be60f0761a703967667f91d"
+    }
+  },
+  "tables.css": {
+    "bytes": 21066,
+    "sha256": "8cc1bec2c06ab3036b435f157fcfb93379ae4485b604de98acbe5d55977ed9b5",
+    "sources": {
+      "AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css": "94358b1b5d296aaf3837417fefcd7c9848f7616e5de8b092066223d8b8ab918a",
+      "AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css": "f8c0031a3cb4d858400637cb9b3ec6ddc53b426a8f18b7cdefef23ff65017789",
+      "AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css": "3118312c58bb616fcab0f9f5c3cc881b8ddd111ba57c09d4d3e35e5af4eee2b6"
+    }
+  },
+  "tables.js": {
+    "bytes": 113335,
+    "sha256": "adc076810125af73972d02e067b56797792f2725886ca892bdbf49431497d070",
+    "sources": {
+      "AdminLTE-3.2.0/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js": "d8ccda79c0869303bbef93ef44992a313778b11e9cb918909644f6894782b125",
+      "AdminLTE-3.2.0/plugins/datatables-responsive/js/dataTables.responsive.min.js": "7feaf64d7dca902e9abe9bfb17c6d18556593bc9d6ef126198229dea4ecfa861",
+      "AdminLTE-3.2.0/plugins/datatables-responsive/js/responsive.bootstrap4.min.js": "308c5ac6865fe2c0252c5abaed7b8055e542d4943b85b5b99823c994e4bbc11d",
+      "AdminLTE-3.2.0/plugins/datatables/jquery.dataTables.min.js": "84c38e8eeff36afc5cc01b19b748569f990168a93a40e7c02a201480226f522d"
+    }
+  },
+  "theme.css": {
+    "bytes": 56434,
+    "sha256": "b80ef752fd15fa03b9e331a4313b3e54a3b52d9ad51e08ed8fc87c56650aedf8",
+    "sources": {
+      "css/science.css": "b763be896c0969382ce249ef9d76d363f272b4c1c753d1563677749c9261c296"
+    }
+  }
+}

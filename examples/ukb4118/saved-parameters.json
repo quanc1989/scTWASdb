@@ -1,0 +1,26 @@
+{
+  "kind": "twas",
+  "state": "success",
+  "parameters": {
+    "chrom": "chr22",
+    "celltype": "CD4+_T_cells_Schmiedel_2018_naive",
+    "collection": "DICE",
+    "thres": "0.050000000000000003",
+    "window": "1000000",
+    "weight": "0",
+    "reference": "hg38",
+    "population": "EUR",
+    "ztest": "both"
+  },
+  "threshold": 0.05,
+  "input_sha256": "e9a8060927192ff050bce0ea8e17bf66e728967c28db335599bad69c0e2ff7b4",
+  "valid_rows": 156,
+  "selected_rows": 10,
+  "artifacts": [
+    {
+      "path": "TWAS_CHR22/CHR22_sumstat_TWAS_assoc.txt",
+      "sha256": "177421a8f5121a4f643c6649df0e4556696e51caa16d36cca1c66f4941f437e0",
+      "bytes": 10175
+    }
+  ]
+}

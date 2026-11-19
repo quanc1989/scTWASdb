@@ -1,0 +1,83 @@
+{% extends 'sctwas/base.html' %}{% block page_id %}browse{% endblock %}
+{% block content %}
+<div class="container provenance-page">
+<header class="page-head">
+  {% if model %}
+  <h1 class="reference-model-title">{{ model.registered_model }}</h1>
+  <p class="lead-copy">{{ model.context }} · {{ model.condition }} · {{ source_presentation.assay|default:model.assay }}</p>
+  <a class="text-link" href="provenance">← Reference models</a>
+  {% else %}
+  <h1>Reference models</h1>
+  <p class="lead-copy">Select expression references by cell population, experimental condition, assay and source study.</p>
+  {% endif %}
+</header>
+{% if model %}
+<section class="card">
+  <div class="card-header"><h2 class="card-title">Model identifiers</h2></div>
+  <div class="card-body"><dl class="metadata-grid">
+    <div><dt>Catalogue ID</dt><dd>{{ model.id }}</dd></div>
+    <div><dt>Cell population</dt><dd>{{ model.subtype }}</dd></div>
+    <div><dt>Catalogue collection</dt><dd>{{ model.collection }}</dd></div>
+    <div><dt>Source study ID</dt><dd>{{ model.study_id }}</dd></div>
+    <div><dt>Expression assay</dt><dd>{{ source_presentation.assay|default:model.assay }}</dd></div>
+    <div><dt>Experimental condition</dt><dd>{{ model.condition }}</dd></div>
+  </dl></div>
+</section>
+<section class="card">
+  <div class="card-header"><h2 class="card-title">Source study</h2></div>
+  <div class="card-body">
+    {% if source_presentation %}<p>{{ source_presentation.context }}</p><p>{{ source_presentation.cohort }}</p>{% endif %}
+    {% if source_reference %}<p><a href="{{ source_reference }}" target="_blank" rel="noopener noreferrer">{% if model.study_id == 'Natri_2023' %}Related 2024 publication{% else %}Source publication{% endif %} ↗</a></p>{% endif %}
+    {% if source_accessions %}<p>Source accessions · {{ source_accessions|join:", " }}</p>{% endif %}
+    {% for record in source_records %}
+      <article class="source-records">
+        <p>{% if record.doi %}<a href="{{ record.doi }}" target="_blank" rel="noopener noreferrer">{{ record.title }} ↗</a>{% else %}{{ record.title }}{% endif %}</p>
+        <p>{{ record.journal }} · {{ record.year }}</p>
+        <dl class="metadata-grid">
+          <div><dt>Catalogue collection</dt><dd>{{ record.sample|default:"Unavailable" }}</dd></div>
+          {% if not source_presentation or source_presentation.catalogue_sample_label %}<div><dt>{{ source_presentation.catalogue_sample_label|default:"Catalogue study sample size" }}</dt><dd>{{ record.samplesize|default_if_none:"Unavailable" }}</dd></div>{% endif %}
+          {% if not source_presentation %}<div><dt>Catalogue expression assay</dt><dd>{{ record.method|default:"Unavailable" }}</dd></div>{% endif %}
+        </dl>
+      </article>
+    {% empty %}<p>Source study metadata are unavailable.</p>{% endfor %}
+  </div>
+</section>
+<section class="card">
+  <div class="card-header"><h2 class="card-title">Expression weight files</h2><p>{{ model.weight_audit.chromosomes|length }} / 22 autosomes</p></div>
+  <div class="card-body">
+    {% if model.weight_audit.missing_chromosomes %}<p>Autosomes without weight files · {{ model.weight_audit.missing_chromosomes|join:", " }}</p>{% endif %}
+    {% if model.weight_audit.candidate_identifier %}<dl class="metadata-grid"><div><dt>Catalogue identifier</dt><dd>{{ model.registered_model }}</dd></div><div><dt>Archive label</dt><dd>{{ model.weight_audit.candidate_identifier }}</dd></div></dl>{% endif %}
+    {% if model.weight_audit.header_review_chromosomes %}<p>Allele columns are A1/A2 on chromosomes {{ model.weight_audit.header_review_chromosomes|join:", " }}. Mapping to REF/ALT is required for TWAS input.</p>{% endif %}
+    <details class="source-records">
+      <summary>Chromosome file information</summary>
+      <p>Available autosomes · {{ model.weight_audit.chromosomes|join:", "|default:"None" }}. Counts represent data lines.</p>
+      {% if model.weight_audit.files %}
+      <div class="table-responsive"><table class="table">
+        <thead><tr><th>Chromosome</th><th>Data lines</th><th>Compressed SHA-256</th></tr></thead>
+        <tbody>{% for file in model.weight_audit.files %}<tr><td>{{ file.chromosome }}</td><td>{{ file.physical_data_lines }}</td><td><code class="digest">{{ file.sha256 }}</code></td></tr>{% endfor %}</tbody>
+      </table></div>
+      {% endif %}
+    </details>
+  </div>
+</section>
+{% else %}
+<div class="stats-strip" aria-label="Reference model catalogue"><div class="stat"><strong>{{ summary.models }}</strong><span>Reference models</span></div><div class="stat"><strong>{{ summary.unique_study_ids }}</strong><span>Distinct study IDs</span></div><div class="stat"><strong>{{ summary.study_records }}</strong><span>Source records</span></div><div class="stat"><strong>{{ summary.models_missing_chromosomes }}</strong><span>Models missing autosomes</span></div></div>
+<form action="provenance" method="get" class="card evidence-filter"><div class="card-body"><div class="field-grid">
+  <div class="form-group"><label for="evidence-query">Model, cell context or study</label><input id="evidence-query" class="form-control" name="q" value="{{ query }}" maxlength="200" placeholder="e.g. fibroblast, Bonder or CD4"></div>
+  <div class="form-group"><label for="evidence-study">Source study</label><select id="evidence-study" class="form-control" name="study"><option value="">All studies</option>{% for study in studies %}<option value="{{ study }}"{% if study == selected_study %} selected{% endif %}>{{ study }}</option>{% endfor %}</select></div>
+  <div class="form-group"><label for="evidence-assay">Expression assay</label><select id="evidence-assay" class="form-control" name="assay"><option value="">All assays</option>{% for assay in assays %}<option value="{{ assay }}"{% if assay == selected_assay %} selected{% endif %}>{{ assay }}</option>{% endfor %}</select></div>
+  <div class="form-group"><label for="evidence-status">Weight file availability</label><select id="evidence-status" class="form-control" name="status"><option value="">All file categories</option>{% for code,label in states %}<option value="{{ code }}"{% if code == selected_status %} selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
+</div><div class="page-actions"><button type="submit" class="btn btn-primary">Apply filters</button><a href="provenance" class="text-link">Reset filters</a></div></div></form>
+<section class="card"><div class="card-header"><h2 class="card-title">{{ matched }} matching model{{ matched|pluralize }}</h2></div>
+  <div class="card-body">
+    <div class="table-responsive"><table class="table evidence-table">
+      <thead><tr><th scope="col">Model and context</th><th scope="col">Expression assay and study</th><th scope="col">Weight files</th></tr></thead>
+      <tbody>{% for item in models %}<tr><td><a class="model-identifier" href="provenance?model={{ item.id }}">{{ item.registered_model }}</a><small class="form-hint">{{ item.subtype }} · {{ item.condition }}</small></td><td>{{ item.assay }}<small class="form-hint">{{ item.study_id }}</small></td><td>{{ item.weight_label }}{% if item.weight_audit.state != '22_archives' %}<small class="form-hint">{{ item.weight_audit.chromosomes|length }} / 22 autosomes</small>{% endif %}</td></tr>{% empty %}<tr><td colspan="3">No models match the selected filters.</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <nav class="page-actions" aria-label="Model result pages">{% if previous_url %}<a class="btn btn-outline-primary" href="{{ previous_url }}">← Previous</a>{% endif %}<span>Page {{ page_number }} of {{ page_count }}</span>{% if next_url %}<a class="btn btn-outline-primary" href="{{ next_url }}">Next →</a>{% endif %}</nav>
+  </div>
+</section>
+{% endif %}
+<p class="registry-note">Metadata version <code>{{ catalog_version }}</code> · Association dataset <code>{{ association_version }}</code>. <a href="provenance_download" download>Download model metadata ↓</a></p>
+</div>
+{% endblock %}

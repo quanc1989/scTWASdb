@@ -1,0 +1,35 @@
+{% extends 'sctwas/base.html' %}{% load static %}
+{% block page_id %}home{% endblock %}
+{% block content %}
+<section class="resource-home" data-content-version="home-explore-20261103-02"><div class="container">
+  <header class="resource-intro">
+    <div class="eyebrow">Cell type–resolved association resource</div>
+    <h1>Explore TWAS evidence across <em>cell-type reference models.</em></h1>
+    <p class="lead-copy">scTWASdb integrates cellular expression reference models with precomputed transcriptome-wide associations and analysis of GWAS summary statistics.</p>
+  </header>
+  <form class="resource-search" action="query" method="get" role="search">
+    <div class="resource-search-fields">
+      <div><label for="home-query-type">Search by</label><select class="form-control" id="home-query-type" name="key"><option value="0">Gene</option><option value="1">Trait</option><option value="2">Variant</option><option value="3">Cell type</option></select></div>
+      <div class="resource-search-value"><label for="home-query">Gene, trait, rsID or cell context</label><input class="form-control" id="home-query" name="q" placeholder="Choose a search type and enter an identifier or term" required maxlength="200"></div>
+      <button class="btn btn-primary" type="submit">Find associations</button>
+    </div>
+    <div class="example-links"><span>Try a gene query</span><a class="sample-query" href="query?q=RGL4&amp;key=0">RGL4</a><a href="documentation#interpretation">How to read a result</a></div>
+  </form>
+  <div class="resource-registry" aria-label="Connected database registry">
+    <div><strong>{{ registry.models }}</strong><span>Reference models</span></div>
+    <div><strong>{{ registry.traits }}</strong><span>Traits</span></div>
+    <div><strong>{{ registry.studies }}</strong><span>Source records</span></div>
+  </div>
+  <p class="registry-note">Counts refer to catalogue entries. <a href="browse">Browse the catalogue →</a></p>
+  <section class="resource-tasks" aria-label="Choose a research task">
+    <article><div class="eyebrow">Explore</div><h2>Precomputed associations</h2><p>Search by gene, trait, variant or cell context. Inspect the records behind a matching trait.</p><a class="text-link" href="query">Explore associations →</a></article>
+    <article><div class="eyebrow">Reference models</div><h2>Expression reference models</h2><p>Review registered model identities, cell backgrounds, conditions and source evidence.</p><a class="text-link" href="provenance">View reference models →</a></article>
+    <article><div class="eyebrow">Your GWAS</div><h2>GWAS summary analysis</h2><p>Use the existing TWAS workflow with a selected reference model and the documented input format.</p><a class="text-link" href="twas">Analyze your GWAS →</a></article>
+  </section>
+  <div class="resource-reading-path"><strong>Association records</strong><span>Gene and trait · Reference model · Association statistics</span></div>
+  <section class="resource-support" aria-label="Help and interpretation">
+    <div><h2>Association statistics</h2><p>The documentation defines the TWAS Z statistic, nominal P value and model source fields.</p><a href="documentation#interpretation">Interpretation guide →</a></div>
+    <div><h2>Analysis methods</h2><p>The analysis tools support FUSION and SPrediXcan association tests and OTTERS expression-weight construction.</p><div class="resource-support-links"><a href="downloads">Examples and catalogs</a><a href="documentation">User guide</a><a href="grex">Expression-weight construction</a></div></div>
+  </section>
+</div></section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>{{ page_title|default:"scTWASdb · Transcriptome-wide associations" }}</title>
+    <meta name="description" content="Cellular expression reference models, transcriptome-wide associations and summary-data analysis.">
+    <link rel="stylesheet" href="{% static 'sctwas/bundles/base.css' %}">
+    {% if select_assets %}<link rel="stylesheet" href="{% static 'sctwas/AdminLTE-3.2.0/plugins/select2/css/select2.min.css' %}">{% endif %}
+    {% if not light_assets %}<link rel="stylesheet" href="{% static 'sctwas/bundles/tables.css' %}">{% endif %}
+    <link rel="stylesheet" href="{% static 'sctwas/bundles/theme.css' %}">
+    <link rel="icon" href="{% static 'sctwas/img/mark.svg' %}" type="image/svg+xml">
+</head>

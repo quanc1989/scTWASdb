@@ -1,0 +1,55 @@
+{
+  "TIGAR": {
+    "TIGAR_TWAS.sh": {
+      "bytes": 6806,
+      "sha256": "59f2d0a0f0096438ca27445a8ee9286c7e00a6c86c9873c8f8c4fafb16b02bcc"
+    },
+    "TWAS/Asso_Study_02.py": {
+      "bytes": 8504,
+      "sha256": "f9227e2dbe026dfe94fce84fd9aed2608aa9de8d064a09ecf3299cbbacf0329c"
+    },
+    "TIGARutils.py": {
+      "bytes": 34701,
+      "sha256": "5196deb259b535932b5870ea4a3f1d320635b32d517757824f21a13fa88c65a3"
+    },
+    "TWAS/Get_LD.py": {
+      "bytes": 5725,
+      "sha256": "f9be8397db164db3c01cf9d861a8c250ca5f4e3da0509cad131fd5f069e51076"
+    },
+    "TIGAR_LD.sh": {
+      "bytes": 6075,
+      "sha256": "5f673fdef4eea5410482be4cf0cc9513e9c730e09239ac925347aea3b1946cd3"
+    }
+  },
+  "OTTERS": {
+    "training.py": {
+      "bytes": 18236,
+      "sha256": "98b7771b9be7db8e60326835690203830e58f8dfaac47beb68577a1e180cf9ae"
+    },
+    "ottersutils.py": {
+      "bytes": 21214,
+      "sha256": "74f60e585d424e11261bf7d281f3c2afdfa2e941e9f393fbd643923f76dbb84f"
+    },
+    "prepare.py": {
+      "bytes": 4943,
+      "sha256": "3b29b2a6dc7cc8702e2b66b54f4c25b03a462465dee005fa03fe48429aaf2ad2"
+    },
+    "PRSmodels/lassosum.R": {
+      "bytes": 3470,
+      "sha256": "f8a8fad805b6a265b11509027975f4210703de4ff7e1aca203a184336f061777"
+    },
+    "PRSmodels/mcmc_gtb.py": {
+      "bytes": 2129,
+      "sha256": "d5b0bd0ab54687e2f7aedc0d8b829030d8d9de78fdec9c3ec4839a0108834087"
+    },
+    "PRSmodels/gigrnd.py": {
+      "bytes": 2872,
+      "sha256": "8911109edfde9bb79545e58136138977756428f3881fdf67ba12e21f6b956400"
+    }
+  },
+  "SDPR": {
+    "source_tree_commit": "c4c61fbac0b21282bbef73e75584f836b4f73fc2",
+    "license_text_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "binary_bytes_inherited": 2115128
+  }
+}

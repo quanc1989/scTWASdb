@@ -1,0 +1,2 @@
+{% extends 'sctwas/base.html' %}{% block page_id %}query{% endblock %}
+{% block content %}<div class="container"><header class="page-head"><div class="eyebrow">Request status {{ status_code }}</div><h1>Result unavailable</h1><p class="lead-copy">{{ message }}</p></header><div class="page-actions section-space"><a class="btn btn-primary" href="query">Explore associations</a><a class="btn btn-light" href="documentation#results">Help with task links</a><a class="btn btn-light" href="twas">Start an analysis</a></div></div>{% endblock %}

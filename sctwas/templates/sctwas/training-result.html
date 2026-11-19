@@ -1,0 +1,10 @@
+{% extends 'sctwas/base.html' %}{% load static %}{% block page_id %}grex{% endblock %}
+{% block content %}<div class="container compact-science-page"><header class="page-head"><h1>Expression-weight results</h1><p class="lead-copy">Expression prediction weights from the submitted eQTL summary statistics.</p></header>
+<div id="training-status" class="notice" role="status" data-state="{{ state }}"><strong>{{ status_title }}</strong>{{ status_description }}</div>
+<div class="page-actions mb-4"><a class="btn btn-light" href="?task={{ tag }}">Refresh status</a><button type="button" class="btn btn-light" data-copy-link>Copy task link</button><a class="btn btn-outline-primary" href="grex">New weight construction</a></div>
+
+<section class="card"><div class="card-header"><h2 class="card-title">Expression weight files</h2></div><div class="card-body">
+{% if artifacts %}<div class="table-responsive"><table class="table" id="training-artifacts"><thead><tr><th scope="col">Weight file</th><th scope="col">Valid variant–gene rows</th></tr></thead><tbody>{% for artifact in artifacts %}<tr><td><a href="download_training?{{ artifact.download_query }}">{{ artifact.path }}</a></td><td>{{ artifact.valid_rows }}</td></tr>{% endfor %}</tbody></table></div>
+{% else %}<p class="count-note">No weight files are available for this task.</p>{% endif %}
+</div></section><details class="card compact-metadata"><summary>Construction parameters</summary><div class="card-body"><dl class="metadata-grid"><div><dt>Task ID</dt><dd class="mono">{{ tag }}</dd></div><div><dt>Training method</dt><dd>{{ parameters.train|default:"Not recorded" }}</dd></div><div><dt>Genome build</dt><dd>{{ parameters.reference|default:"Not recorded" }}</dd></div><div><dt>LD population</dt><dd>{{ parameters.population|default:"Not recorded" }}</dd></div><div><dt>Chromosome</dt><dd>{{ parameters.chrom|default:"Not recorded" }}</dd></div></dl></div></details>
+</div>{% endblock %}

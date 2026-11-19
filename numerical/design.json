@@ -1,0 +1,289 @@
+{
+  "traits": [
+    "296.22",
+    "411.8",
+    "250.2"
+  ],
+  "chromosome": 22,
+  "arms": [
+    "legacy_current_input",
+    "harmonized_rounded",
+    "harmonized_full_precision"
+  ],
+  "gene_rule": "First 10 lexicographic annotated chr22 TargetIDs with 1..1000 nonzero in-cis weight rows; no historic Z/p used",
+  "diagnostic_rule": "First two lexicographic distinct chr22 NaN models; one fixed gene per model across all three traits; not controls or calibration samples",
+  "harmonization": {
+    "window": 1000000,
+    "weight_threshold": 0,
+    "policy": "Only unique rsID-to-current-dbsnp maps, exact or swapped nonpalindromic A/C/G/T allele pairs; exclude strand complement/ambiguous/duplicate coordinates; no inferred sign for unknowns",
+    "z_precision": "Decimal BETA/SE from provider text retained in ledger; binary64 round-trip text for TIGAR; inherited TIGAR downcasting recorded",
+    "old_input": "Unmodified current converted Z file restricted to fixed windows; original weight file"
+  },
+  "comparison_tolerance": {
+    "z_atol": 2e-05,
+    "z_rtol": 1e-05,
+    "rationale": "Independent binary64 R products compared to inherited TIGAR float32 vector sums; report all exact deltas"
+  },
+  "description": "Captured-operand comparison with the independent R formulas.",
+  "group_count": 198,
+  "result_count": 396,
+  "models": [
+    {
+      "collection": "DICE",
+      "model": "B-cell_naive_Schmiedel_2018",
+      "role": "input_complete_control",
+      "genes": [
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "17734138",
+            "GeneEnd": "17774770",
+            "TargetID": "ENSG00000015475",
+            "GeneName": "BID"
+          },
+          "weight_rows_in_cis": 196
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50525752",
+            "GeneEnd": "50530032",
+            "TargetID": "ENSG00000025708",
+            "GeneName": "TYMP"
+          },
+          "weight_rows_in_cis": 189
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50508224",
+            "GeneEnd": "50524780",
+            "TargetID": "ENSG00000025770",
+            "GeneName": "NCAPH2"
+          },
+          "weight_rows_in_cis": 251
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "46762617",
+            "GeneEnd": "47175699",
+            "TargetID": "ENSG00000054611",
+            "GeneName": "TBC1D22A"
+          },
+          "weight_rows_in_cis": 283
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "17137511",
+            "GeneEnd": "17165287",
+            "TargetID": "ENSG00000069998",
+            "GeneName": "HDHD5"
+          },
+          "weight_rows_in_cis": 215
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "19449911",
+            "GeneEnd": "19479202",
+            "TargetID": "ENSG00000070010",
+            "GeneName": "UFD1"
+          },
+          "weight_rows_in_cis": 206
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "19179473",
+            "GeneEnd": "19291719",
+            "TargetID": "ENSG00000070371",
+            "GeneName": "CLTCL1"
+          },
+          "weight_rows_in_cis": 229
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "19036282",
+            "GeneEnd": "19122454",
+            "TargetID": "ENSG00000070413",
+            "GeneName": "DGCR2"
+          },
+          "weight_rows_in_cis": 216
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50200979",
+            "GeneEnd": "50217616",
+            "TargetID": "ENSG00000073169",
+            "GeneName": "SELENOO"
+          },
+          "weight_rows_in_cis": 198
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "46267961",
+            "GeneEnd": "46294008",
+            "TargetID": "ENSG00000075234",
+            "GeneName": "TTC38"
+          },
+          "weight_rows_in_cis": 253
+        }
+      ]
+    },
+    {
+      "collection": "dynamic_CD4T",
+      "model": "CD4_Memory_Trynka_2022_stim_16h",
+      "role": "input_complete_control",
+      "genes": [
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "17734138",
+            "GeneEnd": "17774770",
+            "TargetID": "ENSG00000015475",
+            "GeneName": "BID"
+          },
+          "weight_rows_in_cis": 41
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50525752",
+            "GeneEnd": "50530032",
+            "TargetID": "ENSG00000025708",
+            "GeneName": "TYMP"
+          },
+          "weight_rows_in_cis": 18
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50508224",
+            "GeneEnd": "50524780",
+            "TargetID": "ENSG00000025770",
+            "GeneName": "NCAPH2"
+          },
+          "weight_rows_in_cis": 58
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "46762617",
+            "GeneEnd": "47175699",
+            "TargetID": "ENSG00000054611",
+            "GeneName": "TBC1D22A"
+          },
+          "weight_rows_in_cis": 18
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "17137511",
+            "GeneEnd": "17165287",
+            "TargetID": "ENSG00000069998",
+            "GeneName": "HDHD5"
+          },
+          "weight_rows_in_cis": 15
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "19036282",
+            "GeneEnd": "19122454",
+            "TargetID": "ENSG00000070413",
+            "GeneName": "DGCR2"
+          },
+          "weight_rows_in_cis": 47
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50200979",
+            "GeneEnd": "50217616",
+            "TargetID": "ENSG00000073169",
+            "GeneName": "SELENOO"
+          },
+          "weight_rows_in_cis": 28
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "46267961",
+            "GeneEnd": "46294008",
+            "TargetID": "ENSG00000075234",
+            "GeneName": "TTC38"
+          },
+          "weight_rows_in_cis": 22
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "46576012",
+            "GeneEnd": "46679790",
+            "TargetID": "ENSG00000075240",
+            "GeneName": "GRAMD4"
+          },
+          "weight_rows_in_cis": 60
+        },
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "50767501",
+            "GeneEnd": "50783663",
+            "TargetID": "ENSG00000079974",
+            "GeneName": "RABL2B"
+          },
+          "weight_rows_in_cis": 20
+        }
+      ]
+    },
+    {
+      "collection": "Lung",
+      "model": "Epithelial_Ciliated.Heini_M_Natri_2023",
+      "role": "failure_mechanism_diagnostic",
+      "genes": [
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "17178790",
+            "GeneEnd": "17258235",
+            "TargetID": "ENSG00000093072",
+            "GeneName": "ADA2"
+          },
+          "weight_rows_in_cis": 149
+        }
+      ]
+    },
+    {
+      "collection": "Lung",
+      "model": "Monocyte.Heini_M_Natri_2023",
+      "role": "failure_mechanism_diagnostic",
+      "genes": [
+        {
+          "annotation": {
+            "CHROM": "22",
+            "GeneStart": "42079691",
+            "GeneEnd": "42084284",
+            "TargetID": "ENSG00000183172",
+            "GeneName": "SMDT1"
+          },
+          "weight_rows_in_cis": 338
+        }
+      ]
+    }
+  ],
+  "recorded_outcomes": {
+    "method_positions": 396,
+    "states": {
+      "both_finite": 384,
+      "both_unavailable": 12
+    },
+    "finite_Z_outside_tolerance": 0,
+    "max_finite_Z_delta": 1.0760416824240338e-07
+  }
+}

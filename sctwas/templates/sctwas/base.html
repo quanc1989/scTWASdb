@@ -1,0 +1,12 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+{% include 'sctwas/includes/headers.html' %}
+<body class="layout-top-nav science-ui" data-ui-version="20261103-01" data-page="{% block page_id %}{% endblock %}">
+<a class="skip-link" href="#main-content">Skip to content</a>
+{% include 'sctwas/includes/navbar.html' %}
+<main id="main-content" tabindex="-1">{% block content %}{% endblock %}</main>
+{% include 'sctwas/includes/footer.html' %}
+{% include 'sctwas/includes/library.html' %}
+<script>window.scCsrfToken = '{{ csrf_token|escapejs }}';</script>
+{% block scripts %}{% endblock %}
+</body></html>

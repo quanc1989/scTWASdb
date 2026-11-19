@@ -1,0 +1,52 @@
+[
+  {
+    "file": "third-party/echarts-5.4.2-NOTICE.txt",
+    "source_url": "https://github.com/apache/echarts/blob/5.4.2/NOTICE",
+    "git_blob_sha1": "0877faab81882bcfff64ad01b2ac4060b8b3b698"
+  },
+  {
+    "file": "third-party/echarts-5.4.2-LICENSE.txt",
+    "source_url": "https://github.com/apache/echarts/blob/5.4.2/LICENSE",
+    "git_blob_sha1": "c633765305b658c2b42837d2b72071d73c0379c5"
+  },
+  {
+    "file": "third-party/bootstrap-LICENSE.txt",
+    "source_url": "https://github.com/twbs/bootstrap/blob/v4.6.1/LICENSE",
+    "git_blob_sha1": "72dda234edaa4d2b0e9e2c5420d8685e920ec3e5"
+  },
+  {
+    "file": "third-party/jquery-LICENSE.txt",
+    "source_url": "https://github.com/jquery/jquery/blob/3.6.0/LICENSE.txt",
+    "git_blob_sha1": "f642c3f7a77a5833bc3dfee643ad8ca6387b23e7"
+  },
+  {
+    "file": "third-party/select2-LICENSE.txt",
+    "source_url": "https://github.com/select2/select2/blob/4.0.13/LICENSE.md",
+    "git_blob_sha1": "8cb8a2b12cb7207f971f93f5e3f6fcfff8863d4c"
+  },
+  {
+    "file": "third-party/datatables-LICENSE.txt",
+    "source_url": "https://github.com/DataTables/DataTablesSrc/blob/1.11.4/license.txt",
+    "git_blob_sha1": "a1258be42cc440ac80295c88139b444eb79ebd44"
+  },
+  {
+    "file": "third-party/datatables-buttons-LICENSE.txt",
+    "source_url": "https://github.com/DataTables/Buttons/blob/2.2.2/License.txt",
+    "git_blob_sha1": "3cdf5a46518d2395a70a9f9cb1282652afa3cf8b"
+  },
+  {
+    "file": "third-party/datatables-responsive-LICENSE.txt",
+    "source_url": "https://github.com/DataTables/Responsive/blob/2.2.9/License.txt",
+    "git_blob_sha1": "b542ef817f1e324b1a371d13c46226022d6dfba7"
+  },
+  {
+    "file": "third-party/echarts-d3-LICENSE.txt",
+    "source_url": "https://github.com/apache/echarts/blob/5.4.2/licenses/LICENSE-d3",
+    "git_blob_sha1": "721bd22ece6587a9408eda1b6a3949c425b5624a"
+  },
+  {
+    "file": "third-party/filesaver-LICENSE.txt",
+    "source_url": "https://github.com/eligrey/FileSaver.js/blob/1.3.3/LICENSE.md",
+    "git_blob_sha1": "32ef3ca0ba706f9ae9ef437d7219748c90d1641b"
+  }
+]

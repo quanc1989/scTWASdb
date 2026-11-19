@@ -1,0 +1,25 @@
+{
+  "web": {
+    "version": "20261118-01",
+    "source_commit": "232c8f241a2fe0765a4db230a2a6ceea953d22bd"
+  },
+  "export_rpc_scientific_worker": {
+    "version": "20260918-02",
+    "source_commit": "cf434e42c111098a1e6a75fe851a482e640c8cf5"
+  },
+  "reference_catalogue": "catalog-20260919",
+  "portability_adaptations": [
+    "Standalone settings and read-only example initializer",
+    "Explicit scientific resource environment variables",
+    "Generic worker name and configurable Python interpreter"
+  ],
+  "catalogue_records": {
+    "models": 204,
+    "traits": 829,
+    "sources": 32
+  },
+  "project_license": "MIT",
+  "copyright_holder": "scTWASdb contributors",
+  "copyright_year": 2026,
+  "repository_url": "https://github.com/quanc1989/scTWASdb"
+}

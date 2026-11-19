@@ -1,0 +1,8 @@
+{% load static %}
+<script defer src="{% static 'sctwas/bundles/base.js' %}"></script>
+{% if select_assets %}<script defer src="{% static 'sctwas/AdminLTE-3.2.0/plugins/select2/js/select2.full.min.js' %}"></script>{% endif %}
+{% if not light_assets %}
+<script defer src="{% static 'sctwas/bundles/tables.js' %}"></script>
+{% if table_export_assets %}<script defer src="{% static 'sctwas/bundles/exports.js' %}"></script>{% endif %}
+{% endif %}
+{% if chart_assets %}<script defer src="{% static 'sctwas/echarts/echarts.js' %}"></script>{% endif %}

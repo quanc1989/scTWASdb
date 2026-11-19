@@ -1,0 +1,35 @@
+[
+  {
+    "ensemblid": "ENSG00000159496",
+    "celltype": "LCL_GEUVADIS",
+    "n_snps": 88,
+    "fusion_z": -3.99583854,
+    "fusion_pval": 6.447e-05,
+    "spred_z": -4.66195295,
+    "spred_pval": 3.13e-06,
+    "collectionid": "eQTL_catalouge",
+    "phecode": "464"
+  },
+  {
+    "ensemblid": "ENSG00000159496",
+    "celltype": "T-cell_CD8_Kasela_2017",
+    "n_snps": 52,
+    "fusion_z": 4.39889047,
+    "fusion_pval": 1.088e-05,
+    "spred_z": 4.52415303,
+    "spred_pval": 6.06e-06,
+    "collectionid": "eQTL_catalouge",
+    "phecode": "521.1"
+  },
+  {
+    "ensemblid": "ENSG00000159496",
+    "celltype": "T-cell_CD8_CEDAR",
+    "n_snps": 64,
+    "fusion_z": 4.02326423,
+    "fusion_pval": 5.74e-05,
+    "spred_z": 4.47436339,
+    "spred_pval": 7.66e-06,
+    "collectionid": "eQTL_catalouge",
+    "phecode": "626.2"
+  }
+]

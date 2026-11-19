@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Homo_sapiens.GRCh38.100.gtf.h.geneANNO",
+    "role": "GRCh38 Ensembl100 configuration gene annotation",
+    "bytes": 2776175,
+    "sha256": "e1a15ea0aed21b3461a23f6d2da5b0277301c487290706240808437d9a22c1cb"
+  },
+  {
+    "name": "CHR22_reference_cov.txt.gz",
+    "role": "EUR hg38 chr22 covariance",
+    "bytes": 782969386,
+    "sha256": "c537fb06a36e2ce7303cf1395f044f078249392147053d01adb2108cceb38beb"
+  },
+  {
+    "name": "CHR22_reference_cov.txt.gz.tbi",
+    "role": "EUR hg38 chr22 covariance tabix sidecar",
+    "bytes": 34870,
+    "sha256": "b5e197b41da18f0314d8c3ec24921e5d10ce3fabc7068fa6800e402c4aca4a3c"
+  },
+  {
+    "name": "P0.05.tigar.txt.gz",
+    "role": "DICE na\u00efve CD4 chr22 weights",
+    "bytes": 1181766,
+    "sha256": "e4471b0556fefce29421d64d9281405834557d601355344ec6c79fb4e6ecc408"
+  },
+  {
+    "name": "P0.05.tigar.txt.gz.tbi",
+    "role": "DICE na\u00efve CD4 chr22 weight tabix sidecar",
+    "bytes": 18380,
+    "sha256": "bd89d5c34c0552fcd62fa117b770890a16946d65a399f106726c3c5bd1a97da9"
+  }
+]

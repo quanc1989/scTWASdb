@@ -1,0 +1,58 @@
+{% extends 'sctwas/base.html' %}{% block page_id %}documentation{% endblock %}
+{% block content %}
+<div class="container">
+<header class="page-head"><h1>Documentation</h1><p class="lead-copy">Data organization, analysis methods, input formats and result interpretation.</p></header>
+<div class="doc-layout">
+<nav class="doc-nav" aria-label="Documentation contents"><a href="#start">Data organization</a><a href="#database-results">Database results</a><a href="#twas-input">GWAS input</a><a href="#grex-input">eQTL input</a><a href="#results">Task results</a><a href="#interpretation">Interpretation</a><a href="#sources">Methods and sources</a></nav>
+<div class="doc-content">
+<section id="start"><h2>Data organization</h2>
+  <p>Expression reference models are indexed by model identifier, cellular context, condition and source study. The catalogue includes single-cell, purified-cell and bulk expression assays. The study sample size describes the reported cohort or samples. Model training N is a separate quantity.</p>
+  <p>Catalogue counts refer to entries. More than one source record can share a study ID. The <a href="provenance">reference model catalogue</a> lists source publications and weight files by autosome.</p>
+</section>
+<section id="database-results"><h2>Association records and exports</h2>
+  <p><a href="query">Explore associations</a> accepts a gene symbol, Ensembl ID, rsID, trait description or cell population. Results report distinct model IDs and Ensembl IDs for each trait and the selected filters. Broad queries report progress until all candidate traits have been checked.</p>
+  <p>The precomputed association dataset <code>legacy-db-20260917</code> contains nominally filtered records. A matching record can pass the nominal P filter through either association method. The complete set of tests used to derive these records is unavailable in the database.</p>
+  <p><em>Download all filtered rows (TSV)</em> prepares the matching records at stored precision. <em>Copy current page</em> copies the visible table page. The export record gives the selection, row count, SHA-256 and expiry. Download links remain available for 24 hours after generation and support resumption.</p>
+</section>
+{% if legacy_duplicate_advisory %}<section id="known-data-issues"><h2>Data notes</h2>{% include 'sctwas/includes/data_quality_29622.html' with quality_in_documentation=True %}</section>{% endif %}
+<section id="twas-input"><h2>GWAS summary statistics</h2>
+  <p>Submit a gzip-compressed TSV for one autosome in GRCh38 (hg38), with a header and a maximum file size of 100 MiB.</p>
+  <pre>CHROM   POS       REF   ALT   Zscore
+22      22688361  C     T     -0.3651</pre>
+  <p><code>CHROM</code> and <code>POS</code> identify the chromosome and position. <code>REF</code> and <code>ALT</code> specify the reference and alternate alleles. <code>Zscore</code> is the signed GWAS association statistic. Check the source effect allele and align the sign with the input allele convention.</p>
+  <h3>Example analysis settings</h3>
+  <p>The <a href="example_download?kind=twas">GWAS example</a> contains 4,500 rows from chr22 regions of UKB trait 411.8. Use chr22, hg38, EUR, model <code>CD4+_T_cells_Schmiedel_2018_naive</code>, a cis window of 1,000,000 bp and a weight threshold of 0. Select FUSION, SPrediXcan or both. A nominal P threshold of 0.05 displays the example results.</p>
+</section>
+<section id="grex-input"><h2>eQTL summary statistics</h2>
+  <p>Submit a TSV with a header for the selected autosome in GRCh38 (hg38). The maximum file size is 100 MiB. Use the following columns in order.</p>
+  <pre>CHROM   POS       A1   A2   Z                 TargetID         N
+22      21063901  A    G    2.07743582109394  ENSG00000185651  215</pre>
+  <p><code>A1</code> and <code>A2</code> retain the source allele convention for the signed <code>Z</code> statistic. Check the effect allele before converting column labels. <code>TargetID</code> identifies the expression gene and <code>N</code> gives the sample size in the source summary statistics.</p>
+  <p>The <a href="example_download?kind=grex">eQTL example</a> is a one-gene chr22 subset of D11_Stegle_2021_FPP.iPSCs with 134 variants and N = 215. Use the EUR reference for weight construction.</p>
+</section>
+<section id="results"><h2>Task results and files</h2>
+  <p>Save the task link generated at submission. An email address is optional. The upload percentage measures file transfer. Use <em>Refresh status</em> to check computation progress.</p>
+  <div class="table-responsive"><table class="table"><thead><tr><th>State</th><th>Description</th></tr></thead><tbody>
+    <tr><td>Queued / Analysis in progress</td><td>The task is awaiting execution or running.</td></tr>
+    <tr><td>Completed</td><td>Result records or weight files are available.</td></tr>
+    <tr><td>No associations at this threshold</td><td>Available association tests fall outside the selected nominal P threshold.</td></tr>
+    <tr><td>Analysis incomplete / Analysis failed</td><td>The task produced incomplete, invalid or missing output.</td></tr>
+    <tr><td>No usable results</td><td>The output contains no usable result records.</td></tr>
+    <tr><td>Result unavailable</td><td>An output file failed a format or integrity check.</td></tr>
+    <tr><td>Completion status unavailable</td><td>The task has no recorded completion status. Some existing TWAS records may be readable. Weight downloads are unavailable.</td></tr>
+  </tbody></table></div>
+  <p>TWAS results contain one record per returned gene and method, with a signed Z statistic and nominal P value. The selected threshold controls the displayed and exported records. The TSV retains stored precision. Weight construction produces files for the selected method.</p>
+  <p>Upload data you have permission to share.</p>
+</section>
+<section id="interpretation"><h2>Statistical interpretation</h2>
+  <p>TWAS Z statistics quantify the association between genetically predicted expression and a trait. Association can reflect linked signals or correlated predicted expression across models. Causal interpretation requires additional evidence.</p>
+  <p>The interface uses nominal P values. Study-wide inference requires a multiple-testing procedure defined for the tested analysis family. A gene–method record in the result table is the unit of display.</p>
+  <p>FUSION and S-PrediXcan use the selected GWAS statistics, expression weights and LD reference. The two methods share inputs. Independent replication requires an independent dataset. Match genome build, allele coding and the reference population to the analysis. The LD population and expression reference cohort are distinct parameters.</p>
+  <p>Expression weight estimation and prediction evaluation are separate steps. Prediction performance can be measured using held-out or external expression data.</p>
+</section>
+<section id="sources"><h2>Methods and source studies</h2>
+  <p><a href="https://github.com/yanglab-emory/TIGAR" target="_blank" rel="noopener noreferrer">TIGAR</a> implements the FUSION and S-PrediXcan association paths. <a href="https://github.com/daiqile96/OTTERS" target="_blank" rel="noopener noreferrer">OTTERS</a> supports PT, lassosum, PRScs and SDPR weight estimation from eQTL summary data. PT reports weights at the method's configured P thresholds.</p>
+  <p>Cite the analysis methods and <a href="browse#card_study">source studies</a>. Record the model identifier, GWAS source, genome build, LD population and analysis settings. Example inputs and reference metadata are listed under <a href="downloads">Downloads</a>.</p>
+</section>
+</div></div></div>
+{% endblock %}
