@@ -38,50 +38,52 @@ function initTable() {
     });
 }
 
-function taskPlotRows(records) {
-    var ranked=records.filter(function (row) {return ScEvidence.finite(row.Zscore)!==null;});
-    ranked.sort(function (a,b) {
-        var first=ScEvidence.finite(a.PVALUE), second=ScEvidence.finite(b.PVALUE);
-        if (first===null) return second===null?0:1;
-        if (second===null) return -1;
-        return first-second;
-    });
-    return ranked.slice(0,10).map(function (row,index) {
-        var method=row.Method==='single'||!row.Method?'Unspecified method':row.Method;
-        var point={_record_index:index+1,ensemblid:row.TargetID,celltype:row.celltype,
-            _plot_label:(row.GeneName||row.TargetID)+' · '+method};
-        if (method==='FUSION') {
-            point.fusion_z=row.Zscore;
-            point.fusion_pval=row.PVALUE;
-        } else if (method==='SPrediXcan') {
-            point.spred_z=row.Zscore;
-            point.spred_pval=row.PVALUE;
-        } else {
-            point._unassigned_z=row.Zscore;
-            point._unassigned_p=row.PVALUE;
-            point._method_label=method;
-        }
-        return point;
-    });
-}
-
 $(document).ready(function () {
     initTable();
     var chart=document.getElementById('main');
     if (!chart) return;
-    var rows=taskPlotRows(data_twas),timer;
-    if (!rows.length) {
-        chart.textContent='No Z statistics are available for this task at the selected threshold.';
-        return;
+    var rows=payload.all_rows||[],methods=Array.from(new Set(rows.map(function (row) {return row.Method;}))),timer;
+    var selector=$('#task-region-method');
+    methods.forEach(function (method) {selector.append(new Option(method==='SPrediXcan'?'S-PrediXcan':method,method));});
+    var build=cache_query.reference==='hg38'?'GRCh38 (hg38)':cache_query.reference==='hg19'?'GRCh37 (hg19)':cache_query.reference||'Genome build not recorded';
+    var options={threshold:cache_query.thres_twas,chrom:cache_query.chrom,build:build,model:cache_query.celltype||'Not recorded'};
+    var currentSvg=null;
+    function inspect(row,zero) {
+        var node=$('#task-point-detail').empty();
+        $('<strong>').text((row.GeneName||row.TargetID)+' · '+row.TargetID).appendTo(node);
+        var list=$('<dl class="record-source">').appendTo(node);
+        function item(name,value) {$('<dt>').text(name).appendTo(list);$('<dd>').text(value).appendTo(list);}
+        item('Method',row.Method==='SPrediXcan'?'S-PrediXcan':row.Method);
+        item('Coordinates',cache_query.chrom+':'+row.GeneStart+'–'+row.GeneEnd+' · '+build);
+        item('Interval midpoint (Mb)',String((Number(row.GeneStart)/2+Number(row.GeneEnd)/2)/1e6));
+        item('TWAS Z',row.Zscore);item('Nominal P',row.PVALUE+(zero?' (stored zero; upper-edge marker)':''));item('SNP count',row.n_snps);
+        $('<p>').text(Number(row.PVALUE)<=Number(options.threshold)?'Meets the selected nominal P filter.':'Background record above the selected threshold. The table filter is unchanged.').appendTo(node);
+        if(Number(row.PVALUE)<=Number(options.threshold)) {
+            $('<button type="button" class="btn btn-sm btn-outline-primary">').text('View table row').appendTo(node).on('click',function () {
+                var table=$('#table_twas').DataTable();
+                var index=table.rows().indexes().toArray().filter(function (i) {
+                    var candidate=table.row(i).data();return candidate.TargetID===row.TargetID&&candidate.Method===row.Method;
+                })[0];
+                if(index===undefined)return;
+                var ordered=table.rows({search:'applied',order:'applied'}).indexes().toArray();
+                if(ordered.indexOf(index)===-1){table.search('').columns().search('').draw();ordered=table.rows({search:'applied',order:'applied'}).indexes().toArray();}
+                var length=table.page.len();table.page(length<0?0:Math.floor(ordered.indexOf(index)/length)).draw('page');
+                $('#table_twas tr').removeClass('selected-result-row');
+                var target=table.row(index).node();target.classList.add('selected-result-row');target.setAttribute('tabindex','-1');
+                target.scrollIntoView({block:'center'});target.focus({preventScroll:true});
+            });
+        }
     }
-    var methods=ScEvidence.plotLayout(rows,320).points.map(function (point) {return point.method;});
-    var legend=$('#task-plot-legend');
-    Array.from(new Set(methods)).forEach(function (method) {
-        var marker=method==='FUSION'?'method-fusion':method==='SPrediXcan'?'method-spred':'method-unspecified';
-        $('<span>').append($('<i aria-hidden="true">').addClass(marker),document.createTextNode(method)).appendTo(legend);
-    });
-    $('#task-plot-scope').text(rows.length+' gene–method records ordered by nominal P value.');
-    function draw() {ScEvidence.drawPlot(chart,rows,'TWAS Z statistics for the selected gene–method records.');}
+    function draw() {
+        chart.textContent='';
+        var method=selector.val(),layout=ScResults.regionalLayout(rows,method,options.threshold);
+        if(!layout){chart.textContent='No valid association records are available for a regional plot.';return;}
+        currentSvg=ScResults.regionSvg(rows,method,options,Math.max(230,Math.floor(chart.clientWidth)),inspect);
+        chart.appendChild(currentSvg);
+        $('#task-plot-scope').text(layout.valid+' valid genes · '+layout.hits+' hits for '+(method==='SPrediXcan'?'S-PrediXcan':method)+'. Axes are fixed across methods and thresholds for this saved task.');
+    }
+    selector.on('change',function () {$('#task-point-detail').text('Select a point to inspect its stored statistics and coordinates.');draw();});
+    $('#task-region-svg').on('click',function () {ScResults.saveSvg(currentSvg,'task-regional-'+selector.val()+'.svg');});
     draw();
     window.addEventListener('resize',function () {clearTimeout(timer);timer=setTimeout(draw,150);});
 });

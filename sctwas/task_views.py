@@ -48,7 +48,7 @@ def task_result(request):
         raise ResultError('Task was not found.')
     directory = result_directory(tag, existing=True)
     state = load_status(directory)
-    values = {'tag': tag, 'chrom': chrom, 'threshold': threshold, 'rows': [],
+    values = {'tag': tag, 'chrom': chrom, 'threshold': threshold, 'rows': [], 'all_rows': [],
               'valid_rows': 0, 'selected_rows': 0, 'state': 'running', 'parameters': {}}
     if state:
         values['parameters'] = state.get('parameters', {})
@@ -67,16 +67,19 @@ def task_result(request):
             expected = {item['path']: item['sha256'] for item in state.get('artifacts', [])}
             if expected.get(relative) != sha256(path) or state.get('returncode') != 0:
                 raise ResultError('unverified_artifact')
-        summary = inspect_twas(path, threshold, single_method=values['parameters'].get('ztest') or request.GET.get('ztest') or 'single', expected_chrom=chrom)
+        # Parse the verified artifact once. The figure and all-results export
+        # retain valid nonhits; the existing table keeps its literal P filter.
+        summary = inspect_twas(path, 1.0, single_method=values['parameters'].get('ztest') or request.GET.get('ztest') or 'single', expected_chrom=chrom)
         if summary['invalid_rows']:
             values['state'] = 'partial'
         elif not summary['valid_rows']:
             values['state'] = 'empty_result'
         else:
-            values.update(rows=summary['data'], valid_rows=summary['valid_rows'],
-                          selected_rows=summary['selected_rows'])
+            selected = [row for row in summary['data'] if float(row['PVALUE']) <= threshold]
+            values.update(rows=selected, all_rows=summary['data'], valid_rows=summary['valid_rows'],
+                          selected_rows=len(selected))
             if state:
-                values['state'] = 'success' if summary['selected_rows'] else 'no_hits'
+                values['state'] = 'success' if selected else 'no_hits'
     except (OSError, IOError, ValueError, UnicodeError):
         values['state'] = 'invalid_result'
     return values
@@ -93,7 +96,7 @@ def detail_twas(request):
         studies = list(Study.objects.filter(studyid=celltype['studyid']).values())
         if studies:
             celltype.update(studies[0])
-    for row in result['rows']:
+    for row in result['all_rows']:
         row['celltype'] = model or ''
     cache = {key: request.GET.get(key) or '' for key in
              ('celltype', 'key', 'thres', 'reference', 'population', 'window', 'ztest')}
@@ -107,7 +110,7 @@ def detail_twas(request):
                'download_query': urlencode({'data': result['tag'], 'chrom': result['chrom'],
                                            'thres_twas': result['threshold']}),
                'can_download': result['state'] in ('success', 'no_hits', 'legacy_unverified'),
-               'task_payload': json.dumps({'cache': cache, 'rows': result['rows'], 'celltypes': celltypes,
+               'task_payload': json.dumps({'cache': cache, 'rows': result['rows'], 'all_rows': result['all_rows'], 'celltypes': celltypes,
                                            'study_presentations': SOURCE_PRESENTATIONS}, ensure_ascii=True)}
     context['preview_mode'] = getattr(settings, 'SCTWAS_UI_PREVIEW', False)
     context.update(display_state(result['state']))
@@ -124,11 +127,15 @@ def download_twas(request):
     if result['state'] not in ('success', 'no_hits', 'legacy_unverified'):
         return JsonResponse({'error': 'A validated result is not available.', 'state': result['state']}, status=409)
     response = HttpResponse(content_type='text/tab-separated-values; charset=utf-8')
-    response['Content-Disposition'] = 'attachment; filename="twas-selected.tsv"'
+    scope = request.GET.get('scope', 'selected')
+    if scope not in ('all', 'selected'):
+        return JsonResponse({'error': 'Choose the selected or all-results export.'}, status=400)
+    response['Content-Disposition'] = 'attachment; filename="twas-{0}.tsv"'.format('all-valid' if scope == 'all' else 'selected')
+    response['X-scTWAS-Result-Scope'] = scope
     response['X-scTWAS-P-Threshold'] = format(result['threshold'], '.17g')
     response['X-scTWAS-Result-State'] = result['state']
     response.write('\t'.join(TWAS_COLUMNS) + '\n')
-    for row in result['rows']:
+    for row in result['all_rows'] if scope == 'all' else result['rows']:
         response.write('\t'.join(row[key] for key in TWAS_COLUMNS) + '\n')
     return response
 

@@ -79,4 +79,4 @@ python -m sctwas.research.spool_worker \
 
 The --timeout limit defaults to 21600 seconds per job. The --once option claims at most one queued job. Both modes execute science when a job is present. The RPC module sctwas.research.spool_control receives JSON over SSH standard input. It is not an HTTP endpoint.
 
-RELEASE.json keeps the Web, export/RPC and scientific-worker source identifiers distinct.
+RELEASE.json records the base Web, saved-task result view, shared assets, association-export/RPC and scientific-worker components separately. The local example reports the source-package label source-20261121.1. Saved-task file downloads read an existing result artifact; they do not use the precomputed-association export queue.

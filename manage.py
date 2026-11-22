@@ -67,7 +67,7 @@ def initialize(state):
             'DATABASE':{'ENGINE':'django.db.backends.sqlite3','NAME':str(state/'catalogue.sqlite3')},
             'ALLOWED_HOSTS':['localhost','127.0.0.1'],'HTTPS':False,'READ_ONLY_DEMO':True,
             'STATIC_ROOT':str(state/'static'),'STATIC_URL':'/static/',
-            'SCTWAS_RELEASE':'web-20261118-01','SCTWAS_DATA_VERSION':'example-catalogue',
+            'SCTWAS_RELEASE':'source-20261121.1','SCTWAS_DATA_VERSION':'example-catalogue',
             'SCTWAS_TASK_ROOT':str(state/'tasks'),'SCTWAS_EXPORT_ROOT':str(state/'exports'),
             'SCTWAS_QUERY_CACHE_ROOT':str(state/'query-cache'),
             'MAIL':{'BACKEND':'django.core.mail.backends.locmem.EmailBackend'},

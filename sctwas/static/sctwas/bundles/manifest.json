@@ -44,10 +44,10 @@
     }
   },
   "theme.css": {
-    "bytes": 56434,
-    "sha256": "b80ef752fd15fa03b9e331a4313b3e54a3b52d9ad51e08ed8fc87c56650aedf8",
+    "bytes": 60847,
+    "sha256": "31097c02feaef604d9b228ece5175f8345e2c1ebba88f05237571beb72ded179",
     "sources": {
-      "css/science.css": "b763be896c0969382ce249ef9d76d363f272b4c1c753d1563677749c9261c296"
+      "css/science.css": "6cf0000399506da316a0f09a2e8c093d637b8376fd26bccc70b05dbe2bbe41ab"
     }
   }
 }

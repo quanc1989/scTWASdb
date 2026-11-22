@@ -2,7 +2,7 @@
 
 scTWASdb is a Django application for finding and understanding transcriptome-wide association evidence across cellular expression references. It provides searchable model, trait and source catalogues, association queries, downloadable results and interfaces for summary-statistic TWAS and expression-weight construction.
 
-The project repository URL is [quanc1989/scTWASdb](https://github.com/quanc1989/scTWASdb). The hosted resource is available at [sctwas.omic.tech](https://sctwas.omic.tech/). This tree contains the Web implementation associated with version 20261118-01 and the separately versioned export, queue-control and scientific-worker implementation. Component identifiers are recorded in [RELEASE.json](RELEASE.json).
+The project repository URL is [quanc1989/scTWASdb](https://github.com/quanc1989/scTWASdb). The hosted resource is available at [sctwas.omic.tech](https://sctwas.omic.tech/). Source package **20261121.1** adds the saved-task regional result view from hosted Web release 20261121-01. The base catalogue and Explore interfaces retain version 20261118-01; the association-export, queue-control and scientific-worker wrappers retain their separately recorded version. Component identifiers and scope are recorded in [RELEASE.json](RELEASE.json) and [result-view components](docs/RESULTS_VIEW.md).
 
 ## Run the example
 
@@ -25,7 +25,9 @@ The example includes three saved RGL4 association records across three traits. O
 http://127.0.0.1:8000/detail?key=5&data=00000000000000000000000000000001&chrom=chr22&thres_twas=0.05
 ~~~
 
-Example mode permits read-only browsing and saved-result downloads. Job submission is disabled. Its health endpoint reports actual database and scientific-worker readiness, so compute_ready is false when no worker is running.
+The saved task offers a method-specific regional plot of all 78 valid genes, a threshold-filtered results table, point details, SVG export and separate selected/all-valid TSV downloads. At nominal P ≤ 0.05, each method has five selected genes; at 1e-5, the table is empty while all 78 genes per method remain in the plot. Axes are shared across methods and thresholds. See the [result-view guide](docs/RESULTS_VIEW.md).
+
+Example mode permits read-only browsing and saved-result downloads. Job submission is disabled. Its health endpoint reports actual database and scientific-worker readiness, so compute_ready is false and the health status is 503 when no worker is running. Saved-result browsing and downloads remain available in this read-only mode.
 
 ## Included material
 

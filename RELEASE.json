@@ -1,11 +1,13 @@
 {
   "web": {
     "version": "20261118-01",
-    "source_commit": "232c8f241a2fe0765a4db230a2a6ceea953d22bd"
+    "source_commit": "232c8f241a2fe0765a4db230a2a6ceea953d22bd",
+    "scope": "Base catalogue, Explore and precomputed association interfaces"
   },
   "export_rpc_scientific_worker": {
     "version": "20260918-02",
-    "source_commit": "cf434e42c111098a1e6a75fe851a482e640c8cf5"
+    "source_commit": "cf434e42c111098a1e6a75fe851a482e640c8cf5",
+    "scope": "Precomputed association export queue, RPC and scientific-worker wrappers; saved-task file downloads are handled by saved_task_results"
   },
   "reference_catalogue": "catalog-20260919",
   "portability_adaptations": [
@@ -21,5 +23,41 @@
   "project_license": "MIT",
   "copyright_holder": "scTWASdb contributors",
   "copyright_year": 2026,
-  "repository_url": "https://github.com/quanc1989/scTWASdb"
+  "repository_url": "https://github.com/quanc1989/scTWASdb",
+  "source_package_version": "20261121.1",
+  "parent_public_commit": "fb0948a49a0843b99ba8b785d90e5b926b522124",
+  "saved_task_results": {
+    "version": "20261121-01",
+    "source_commit": "0f6201fec7f0d40d80f0de16223794bdbe059bf4",
+    "components": [
+      "Saved-task regional association plot",
+      "Method-specific point details and table-row navigation",
+      "Threshold-selected and all-valid saved-result TSV downloads",
+      "SVG export"
+    ],
+    "files": [
+      "sctwas/task_views.py",
+      "sctwas/templates/sctwas/top-nav.Task.html",
+      "sctwas/static/sctwas/js/details.Tasks.js"
+    ]
+  },
+  "shared_presentation_assets": {
+    "version": "20261121-01",
+    "source_commit": "0f6201fec7f0d40d80f0de16223794bdbe059bf4",
+    "files": [
+      "sctwas/static/sctwas/js/results-plots.js",
+      "sctwas/static/sctwas/css/science.css",
+      "sctwas/static/sctwas/bundles/theme.css",
+      "sctwas/static/sctwas/bundles/manifest.json"
+    ],
+    "scope": "Production shared SVG renderer and styles; paired-rendering helpers are present but the parent Explore workflow is retained"
+  },
+  "retained_shared_numeric_utilities": {
+    "path": "sctwas/static/sctwas/js/explore-evidence.js",
+    "version": "20261118-01",
+    "compatible_apis": [
+      "finite",
+      "pState"
+    ]
+  }
 }

@@ -15,7 +15,7 @@
   "READ_ONLY_DEMO": true,
   "STATIC_ROOT": "runtime/static",
   "STATIC_URL": "/static/",
-  "SCTWAS_RELEASE": "web-20261118-01",
+  "SCTWAS_RELEASE": "source-20261121.1",
   "SCTWAS_DATA_VERSION": "local-resource-version",
   "SCTWAS_TASK_ROOT": "runtime/tasks",
   "SCTWAS_EXPORT_ROOT": "runtime/exports",

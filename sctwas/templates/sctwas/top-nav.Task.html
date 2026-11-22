@@ -3,8 +3,15 @@
 <div class="notice" id="task-status" role="status" data-state="{{ cache_query.state }}"><strong>{{ status_title }}</strong>{{ status_description }}</div>
 <div class="page-actions mb-4"><a class="btn btn-light" href="?key=5&amp;data={{ cache_query.jobid }}&amp;chrom={{ cache_query.chrom }}&amp;thres_twas={{ cache_query.thres_twas }}">Refresh status</a><button type="button" class="btn btn-light" data-copy-link>Copy task link</button><a class="btn btn-outline-primary" href="twas">New analysis</a></div>
 <details class="card compact-metadata"><summary>Analysis parameters</summary><div class="card-body"><dl class="metadata-grid"><div><dt>Task ID</dt><dd class="mono">{{ cache_query.jobid|default:"Not recorded" }}</dd></div><div><dt>Reference model</dt><dd>{{ cache_query.celltype|default:"Not recorded" }}</dd></div><div><dt>Genome build</dt><dd>{{ cache_query.reference|default:"Not recorded" }}</dd></div><div><dt>Chromosome</dt><dd>{{ cache_query.chrom|default:"Not recorded" }}</dd></div><div><dt>LD population</dt><dd>{{ cache_query.population|default:"Not recorded" }}</dd></div><div><dt>Association method</dt><dd>{{ cache_query.ztest|default:"Not recorded" }}</dd></div><div><dt>Cis window (bp)</dt><dd>{{ cache_query.window|default:"Not recorded" }}</dd></div><div><dt>Weight threshold</dt><dd>{{ cache_query.thres|default_if_none:"Not recorded" }}</dd></div></dl></div></details>
+{% if valid_rows %}<section class="card task-region-card" aria-labelledby="task-region-title">
+<div class="card-header"><h2 class="card-title" id="task-region-title">Regional association evidence</h2><p>All valid genes from this completed task, including records above the selected nominal P threshold.</p></div>
+<div class="card-body"><div class="figure-actions"><label for="task-region-method">Method <select id="task-region-method" class="form-control"></select></label><button class="btn btn-sm btn-outline-primary" id="task-region-svg" type="button">Export SVG</button></div>
+<p id="task-plot-scope" class="evidence-scope" role="status"></p><div class="regional-chart" id="main"></div>
+<div id="task-point-detail" class="task-point-detail" aria-live="polite">Select a point to inspect its stored statistics and coordinates.</div>
+<p class="figure-key">The x-axis uses each gene interval midpoint, not a lead variant. Open points are valid background results; filled points meet the selected nominal P threshold. Selecting a point leaves the table filter unchanged.</p>
+</div></section>{% endif %}
 <section class="card"><div class="card-header"><h2 class="card-title">Gene association results</h2><p>The TSV contains statistics at their stored precision.</p></div>
-<div class="result-tools"><form class="threshold-form" method="get" action="detail"><input type="hidden" name="key" value="5"><input type="hidden" name="data" value="{{ cache_query.jobid }}"><input type="hidden" name="chrom" value="{{ cache_query.chrom }}"><label for="task-threshold">Nominal P ≤<input class="form-control" type="text" id="task-threshold" name="thres_twas" value="{{ cache_query.thres_twas }}" required></label><button type="submit" class="btn btn-light">Apply filter</button></form><p class="count-note">{{ selected_rows }} shown / {{ valid_rows }} valid gene–method tests</p>{% if can_download %}<a class="btn btn-primary btn-sm" href="download_twas?{{ download_query }}">Download selected TSV ↓</a>{% endif %}</div>
+<div class="result-tools"><form class="threshold-form" method="get" action="detail"><input type="hidden" name="key" value="5"><input type="hidden" name="data" value="{{ cache_query.jobid }}"><input type="hidden" name="chrom" value="{{ cache_query.chrom }}"><label for="task-threshold">Nominal P ≤<input class="form-control" type="text" id="task-threshold" name="thres_twas" value="{{ cache_query.thres_twas }}" required></label><button type="submit" class="btn btn-light">Apply filter</button></form><p class="count-note">{{ selected_rows }} shown / {{ valid_rows }} valid gene–method tests</p>{% if can_download %}<div class="task-downloads"><a class="btn btn-primary btn-sm" href="download_twas?{{ download_query }}">Download threshold-selected TSV ↓</a><a class="btn btn-outline-primary btn-sm" id="task-all-download" href="download_twas?{{ download_query }}&amp;scope=all">Download all valid results TSV ↓</a></div>{% endif %}</div>
 <div class="card-body"><p class="table-scroll-hint">Swipe horizontally to view all columns.</p><table id="table_twas" class="table table-striped" style="width:100%">
                                     <thead>
                                     <tr>
@@ -23,10 +30,6 @@
                                     </thead>
                                     <tbody></tbody>
                                 </table></div></section>
-{% if selected_rows %}<section class="card">
-<div class="card-header"><h2 class="card-title">TWAS Z statistics by gene and method</h2><p id="task-plot-scope" role="status">Up to ten gene–method records ordered by nominal P value.</p></div>
-<div class="card-body"><div class="evidence-legend" id="task-plot-legend"></div><div class="evidence-chart" id="main"></div></div>
-</section>{% endif %}
 <section class="card"><div class="card-header"><h2 class="card-title">Model context &amp; source</h2></div><div class="card-body"><table id="table_celltype" class="table table-striped" style="width:100%">
                                     <thead>
                                     <tr>
@@ -42,4 +45,4 @@
                                     <tbody></tbody>
                                 </table></div></section>
 
-</div>{% endblock %}{% block scripts %}<script>var payload=JSON.parse('{{ task_payload|escapejs }}');var data_twas=payload.rows, data_celltype=payload.celltypes, cache_query=payload.cache;cache_query.valid=true;</script><script defer src="{% static 'sctwas/js/explore-evidence.js' %}"></script><script defer src="{% static 'sctwas/js/details.Tasks.js' %}?v=20260912"></script>{% endblock %}
+</div>{% endblock %}{% block scripts %}<script>var payload=JSON.parse('{{ task_payload|escapejs }}');var data_twas=payload.rows, data_celltype=payload.celltypes, cache_query=payload.cache;cache_query.valid=true;</script><script defer src="{% static 'sctwas/js/explore-evidence.js' %}"></script><script defer src="{% static 'sctwas/js/results-plots.js' %}?v=20261121-01"></script><script defer src="{% static 'sctwas/js/details.Tasks.js' %}?v=20261121-01"></script>{% endblock %}
